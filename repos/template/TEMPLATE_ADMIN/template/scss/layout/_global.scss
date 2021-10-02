@@ -1,0 +1,284 @@
+/* -------------------------------------- */
+/* ############### GLOBAL ############### */
+/* -------------------------------------- */
+
+.load-more-wrapper {
+  border: 1px solid $gray-400;
+  padding: 12px 0;
+  text-align: center;
+  background-color: #fff;
+}
+
+.card-slim {
+  .card-body { padding: 25px; }
+  .card-title {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 13px;
+    font-family: $font-family-montserrat;
+    color: $gray-800;
+    margin-bottom: 25px;
+  }
+}
+
+.card-slim-md {
+  .card-body { padding: 40px; }
+  .card-title { margin-bottom: 40px; }
+}
+
+.slim-card-title {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 13px;
+  color: $gray-800;
+  letter-spacing: 1px;
+}
+
+.section-wrapper {
+  border: 1px solid $gray-400;
+  background-color: #fff;
+  padding: 20px;
+
+  @include media-breakpoint-up(sm) { padding: 40px; }
+
+  .section-title:first-child { margin-top: 0; }
+}
+
+.section-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: $gray-800;
+  text-transform: uppercase;
+  margin-top: 20px;
+  display: block;
+  letter-spacing: 1px;
+
+  @include media-breakpoint-up(sm) { margin-top: 40px; }
+}
+
+.table-reference {
+  margin-bottom: 0;
+
+  thead tr {
+    th,
+    td {
+      background-color: transparent;
+      border: 1px solid $gray-400;
+      border-bottom: 0;
+
+      + th,
+      + td { border-left: 0; }
+    }
+  }
+
+  tbody {
+    tr {
+      th,
+      td {
+        border: 1px solid $gray-400;
+
+        + th,
+        + td { border-left: 0; }
+      }
+
+      + tr {
+        th,
+        td { border-top: 0; }
+      }
+    }
+  }
+}
+
+// With sidebar menu
+.slim-body {
+  @include transition($transition-base);
+  @include media-breakpoint-up(xl) {
+    display: flex;
+    min-height: calc(100vh - 75px);
+  }
+
+  .slim-mainpanel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+
+    .container {
+      max-width: none;
+      padding: 15px;
+
+      @include media-breakpoint-up(sm) { padding: 20px; }
+      @include media-breakpoint-up(md) { padding: 25px; }
+
+      &.container-messages {
+        padding: 0;
+        @include media-breakpoint-up(lg) { padding: 20px; }
+      }
+    }
+  }
+
+  .slim-pageheader { padding-top: 0; }
+
+  .slim-footer { margin-top: auto; }
+}
+
+.hide-sidebar {
+  @include media-breakpoint-up(xl) {
+    .slim-header.with-sidebar .slim-logo { margin-left: -$slim-sidebar-width + 15px; }
+    .slim-sidebar { margin-left: -$slim-sidebar-width; }
+
+    &.slim-sticky-sidebar {
+      .slim-mainpanel { margin-left: 0; }
+    }
+  }
+}
+
+.show-sidebar {
+  @include media-breakpoint-down(lg) {
+    overflow-x: hidden;
+
+    .slim-header.with-sidebar {
+      .slim-logo { margin-left: 0; }
+      .slim-header-right { transform: translateX($slim-sidebar-width - 15px); }
+
+      .slim-sidebar-menu {
+        span {
+          background-color: transparent;
+          left: 3px;
+
+          &,
+          &::before,
+          &::after {
+            transform: scale(1.15);
+            width: 15px;
+          }
+
+          &::before {
+            transform: rotate(45deg);
+            transform-origin: top left;
+          }
+
+          &::after {
+            transform: rotate(-45deg);
+            transform-origin: bottom left;
+          }
+        }
+      }
+    }
+
+    .slim-body {
+      display: flex;
+      transform: translateX($slim-sidebar-width);
+    }
+
+    .slim-sidebar { position: relative; }
+
+    // Sticky sidebar
+    &.slim-sticky-sidebar {
+      overflow: hidden;
+
+      .slim-body {
+        display: block;
+        transform: none;
+      }
+
+      .slim-sidebar {
+        position: fixed;
+        top: $slim-header-height;
+        left: 0;
+        bottom: 0;
+        margin-left: 0;
+      }
+
+      .slim-mainpanel {
+        transform: translateX($slim-sidebar-width);
+        opacity: .75;
+      }
+    }
+  }
+}
+
+
+/*********************************/
+/********** RTL SUPPORT **********/
+
+[dir="rtl"] {
+  .section-title {
+    text-align: right;
+    + p { text-align: right; }
+  }
+
+  .table-reference {
+    thead tr {
+      th,
+      td {
+        border: 1px solid $gray-400;
+        border-bottom: 0;
+        text-align: right;
+
+        + th,
+        + td { border-right: 0; }
+      }
+    }
+
+    tbody {
+      tr {
+        th,
+        td {
+          border: 1px solid $gray-400;
+          text-align: right;
+
+          + th,
+          + td { border-right: 0; }
+        }
+
+        + tr {
+          th,
+          td { border-top: 0; }
+        }
+      }
+    }
+  }
+
+
+  .hide-sidebar {
+    @include media-breakpoint-up(xl) {
+      .slim-header.with-sidebar .slim-logo {
+        margin-left: 0;
+        margin-right: -$slim-sidebar-width + 25px;
+      }
+
+      .slim-sidebar {
+        margin-left: 0;
+        margin-right: -$slim-sidebar-width;
+      }
+
+      &.slim-sticky-sidebar {
+        .slim-mainpanel { margin-right: 0; }
+      }
+    }
+  }
+
+  .show-sidebar {
+    @include media-breakpoint-down(lg) {
+      .slim-header.with-sidebar {
+        .slim-logo { margin-right: 0; }
+        .slim-header-right { transform: translateX(-$slim-sidebar-width - 15px); }
+      }
+
+      .slim-body { transform: translateX(-$slim-sidebar-width); }
+
+      // Sticky sidebar
+      &.slim-sticky-sidebar {
+        .slim-body { transform: none; }
+        .slim-sidebar {
+          right: 0;
+          margin-right: 0;
+        }
+
+        .slim-mainpanel { transform: translateX(-$slim-sidebar-width); }
+      }
+    }
+  }
+}

@@ -1,0 +1,62 @@
+/* --------------------------------------------- */
+/* ############### STICKY HEADER ############### */
+/* --------------------------------------------- */
+
+.slim-sticky-header {
+  .slim-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  .slim-navbar {
+    position: fixed;
+    top: $slim-header-height;
+    left: 0;
+    width: 100%;
+    z-index: 995;
+
+    .sub-item {
+      max-height: calc(100vh - 152px);
+      overflow-y: auto;
+
+      @include media-breakpoint-up(lg) {
+        max-height: none;
+        overflow-y: inherit;
+      }
+    }
+  }
+
+  .slim-mainpanel { margin-top: $slim-header-height + 77px; }
+
+  // with sidebar
+  .slim-body {
+    margin-top: $slim-header-height;
+    .slim-mainpanel { margin-top: 0; }
+  }
+}
+
+
+.sticky-header {
+  .slim-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1010;
+  }
+
+  .slim-navbar {
+    position: fixed;
+    top: $slim-header-height;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  .slim-mainpanel {
+    padding-top: 160px;
+    min-height: 100vh;
+  }
+}

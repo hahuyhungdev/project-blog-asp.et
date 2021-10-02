@@ -1,0 +1,44 @@
+
+/* -------------------------------------- */
+/* ############### FOOTER ############### */
+/* -------------------------------------- */
+
+.slim-footer {
+  border-top: 1px solid $gray-400;
+  background-color: darken($gray-200, 2%);
+  margin-top: 30px;
+  padding: 15px 0;
+
+  @include media-breakpoint-up(lg) {
+    margin-top: 50px;
+    padding: 0;
+  }
+
+  .container,
+  .container-fluid {
+    font-size: 13px;
+    text-align: center;
+
+    @include media-breakpoint-up(md) {
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      text-align: left;
+    }
+
+    p {
+      margin-bottom: 0;
+      &:last-child {
+        margin-top: 5px;
+      }
+    }
+  }
+
+  .container-fluid {
+    @include media-breakpoint-up(lg) {
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+  }
+}
