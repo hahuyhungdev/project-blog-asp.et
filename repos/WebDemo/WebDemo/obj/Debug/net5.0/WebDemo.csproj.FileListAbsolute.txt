@@ -826,3 +826,8 @@ D:\backup\GitHub\soucre\repos\WebDemo\WebDemo\obj\Debug\net5.0\Razor\Areas\Admin
 D:\backup\GitHub\soucre\repos\WebDemo\WebDemo\obj\Debug\net5.0\Razor\Areas\Admin\Views\_ViewImports.cshtml.g.cs
 D:\backup\GitHub\soucre\repos\WebDemo\WebDemo\obj\Debug\net5.0\Razor\Areas\Admin\Views\_ViewStart.cshtml.g.cs
 D:\backup\GitHub\soucre\repos\WebDemo\WebDemo\obj\Debug\net5.0\Razor\Areas\Admin\Views\Home\Index.cshtml.g.cs
+D:\backup\GitHub\soucre\repos\WebDemo\WebDemo\obj\Debug\net5.0\Razor\Areas\Admin\Views\Roles\Create.cshtml.g.cs
+D:\backup\GitHub\soucre\repos\WebDemo\WebDemo\obj\Debug\net5.0\Razor\Areas\Admin\Views\Roles\Delete.cshtml.g.cs
+D:\backup\GitHub\soucre\repos\WebDemo\WebDemo\obj\Debug\net5.0\Razor\Areas\Admin\Views\Roles\Details.cshtml.g.cs
+D:\backup\GitHub\soucre\repos\WebDemo\WebDemo\obj\Debug\net5.0\Razor\Areas\Admin\Views\Roles\Edit.cshtml.g.cs
+D:\backup\GitHub\soucre\repos\WebDemo\WebDemo\obj\Debug\net5.0\Razor\Areas\Admin\Views\Roles\Index.cshtml.g.cs
