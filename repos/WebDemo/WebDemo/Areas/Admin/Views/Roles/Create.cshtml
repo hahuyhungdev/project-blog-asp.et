@@ -1,36 +1,41 @@
 ﻿@model WebDemo.Models.Role
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "TẠO MỚI QUYỀN TRUY CẬP";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<h1>Create</h1>
+<div class="slim-pageheader">
+    <ol class="breadcrumb slim-breadcrumb">
+        <li class="breadcrumb-item"><a asp-area="Admin" asp-controller="Home" asp-action="Index">HOME</a></li>
+        <li class="breadcrumb-item"><a asp-area="Admin" asp-controller="Roles" asp-action="Index">QUẢN LÍ QUYỀN TRUY CẬP</a></li>
+        <li class="breadcrumb-item active" aria-current="page">TẠO MỚI QUYỀN TRUY CẬP</li>
+    </ol>
+    <h6 class="slim-pagetitle">TẠO MỚI QUYỀN TRUY CẬP</h6>
+</div><!-- slim-pageheader -->
 
-<h4>Role</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="RoleName" class="control-label"></label>
-                <input asp-for="RoleName" class="form-control" />
-                <span asp-validation-for="RoleName" class="text-danger"></span>
+<div class="section-wrapper">
+    <form asp-area="Admin" asp-controller="Roles" asp-action="Create" method="post">
+        <div class="form-layout">
+            <div class="row mg-b-25">
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label class="form-control-label">RoleName: <span class="tx-danger">*</span></label>
+                        <input class="form-control" type="text" asp-for="RoleName">
+                    </div>
+                </div><!-- col-4 -->
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label class="form-control-label">RoleDescription: <span class="tx-danger">*</span></label>
+                        <input class="form-control" type="text" asp-for="RoleDescription">
+                    </div>
+                </div><!-- col-4 -->
+               
             </div>
-            <div class="form-group">
-                <label asp-for="RoleDescription" class="control-label"></label>
-                <input asp-for="RoleDescription" class="form-control" />
-                <span asp-validation-for="RoleDescription" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
-    </div>
-</div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
-
+            <div class="form-layout-footer">
+                <button class="btn btn-primary bd-0">Submit Form</button>
+                <button class="btn btn-secondary bd-0">Cancel</button>
+            </div><!-- form-layout-footer -->
+        </div><!-- form-layout -->
+    </form>
+</div><!-- section-wrapper -->
