@@ -59,7 +59,7 @@ namespace WebDemo.Areas.Admin.Controllers
         // GET: Admin/Categories/Create
         public IActionResult Create()
         {
-            ViewData["DanhMucGoc"] = new SelectList(_context.Categories.Where(x => x.Levels == 1), "CatID", "CatName");
+            ViewData["DanhMuc"] = new SelectList(_context.Categories.Where(x => x.Levels == 1), "CatID", "CatName");
             return View();  
         }
 

@@ -5,93 +5,167 @@
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<h1>Details</h1>
+<div class="slim-pageheader">
+    <ol class="breadcrumb slim-breadcrumb">
+        <li class="breadcrumb-item"><a asp-area="Admin" asp-controller="Home" asp-action="Index">HOME</a></li>
+        <li class="breadcrumb-item"><a asp-area="Admin" asp-controller="Roles" asp-action="Index">DANH SÁCH QUYỀN DANH MỤC</a></li>
+        <li class="breadcrumb-item active" aria-current="page">THÔNG TIN QUYỀN DANH MỤC</li>
+    </ol>
+    <h6 class="slim-pagetitle">THÔNG TIN QUYỀN DANH MỤC</h6>
+</div><!-- slim-pageheader -->
+<div class="section-wrapper mg-t-20">
+    <label class="section-title">XTHÔNG TIN QUYỀN DANH MỤC</label>
 
-<div>
-    <h4>Category</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.CatName)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.CatName)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Title)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Title)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Alias)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Alias)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.MetaDesc)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.MetaDesc)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.MetaKey)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.MetaKey)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Thumb)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Thumb)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Published)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Published)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Ordering)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Ordering)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Parents)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Parents)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Levels)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Levels)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Icon)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Icon)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Cover)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Cover)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Desciption)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Desciption)
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model.CatId">Edit</a> |
-    <a asp-action="Index">Back to List</a>
-</div>
+    <div class="form-layout form-layout-7">
+        <div class="row no-gutters">
+            <div class="col-5 col-sm-4">
+                ID:
+            </div><!-- col-4 -->
+            <div class="col-7 col-sm-8">
+                <input asp-for="CatId" class="form-control" type="text">
+            </div><!-- col-8 -->
+        </div><!-- row -->
+        <div class="row no-gutters">
+            <div class="col-5 col-sm-4">
+                Role Name:
+            </div><!-- col-4 -->
+            <div class="col-7 col-sm-8">
+                <input asp-for="CatName" class="form-control" type="text">
+            </div><!-- col-8 -->
+        </div><!-- row -->
+        <div class="row no-gutters">
+            <div class="col-5 col-sm-4">
+                Tiêu đề:
+            </div><!-- col-4 -->
+            <div class="col-7 col-sm-8">
+                <input asp-for="Title" class="form-control" type="text">
+            </div><!-- col-8 -->
+        </div><!-- row -->
+        <div class="row no-gutters">
+            <div class="col-5 col-sm-4">
+                Alias:
+            </div><!-- col-4 -->
+            <div class="col-7 col-sm-8">
+                <input asp-for="Alias" class="form-control" type="text">
+            </div><!-- col-8 -->
+        </div><!-- row -->
+        <div class="row no-gutters">
+            <div class="col-5 col-sm-4">
+                Tiêu đề:
+            </div><!-- col-4 -->
+            <div class="col-7 col-sm-8">
+                <input asp-for="Title" class="form-control" type="text">
+            </div><!-- col-8 -->
+        </div><!-- row -->
+        <div class="row no-gutters">
+            <div class="col-5 col-sm-4">
+                MetaDesc:
+            </div><!-- col-4 -->
+            <div class="col-7 col-sm-8">
+                <input asp-for="MetaDesc" class="form-control" type="text">
+            </div><!-- col-8 -->
+        </div><!-- row -->
+        <div class="row no-gutters">
+            <div class="col-5 col-sm-4">
+                MetaKey:
+            </div><!-- col-4 -->
+            <div class="col-7 col-sm-8">
+                <input asp-for="MetaKey" class="form-control" type="text">
+            </div><!-- col-8 -->
+        </div><!-- row -->
+        <div class="row no-gutters">
+            <div class="col-5 col-sm-4">
+                MetaKey:
+            </div><!-- col-4 -->
+            <div class="col-7 col-sm-8">
+                <input asp-for="MetaKey" class="form-control" type="text">
+            </div><!-- col-8 -->
+        </div><!-- row -->
+
+        <div class="row no-gutters">
+            <div class="col-5 col-sm-4">
+                Trạng thái:
+            </div><!-- col-4 -->
+            <div class="col-7 col-sm-8">
+                @if (Model.Published == true)
+                {
+                    <span class="badge badge-primary">Public</span>
+                }
+                else
+                {
+                    <span class="badge badge-primary">NON-Public</span>
+                }
+            </div><!-- col-8 -->
+        </div><!-- row -->
+        <div class="row no-gutters">
+            <div class="col-5 col-sm-4">
+                Ordering:
+            </div><!-- col-4 -->
+            <div class="col-7 col-sm-8">
+                <input asp-for="Ordering" class="form-control" type="text">
+            </div><!-- col-8 -->
+        </div><!-- row -->
+        <div class="row no-gutters">
+            <div class="col-5 col-sm-4">
+                Parents:
+            </div><!-- col-4 -->
+            <div class="col-7 col-sm-8">
+                <input asp-for="Parents" class="form-control" type="text">
+            </div><!-- col-8 -->
+        </div><!-- row -->
+        <div class="row no-gutters">
+            <div class="col-5 col-sm-4">
+                Levels:
+            </div><!-- col-4 -->
+            <div class="col-7 col-sm-8">
+                <input asp-for="Levels" class="form-control" type="text">
+            </div><!-- col-8 -->
+        </div><!-- row -->
+        <div class="row no-gutters">
+            <div class="col-5 col-sm-4">
+                Icon:
+            </div><!-- col-4 -->
+            <div class="col-7 col-sm-8">
+                @if (!string.IsNullOrEmpty(Model.Icon))
+                {
+                    <img width="80" height="80" src="~/images/icons/@Model.Icon" alt="@Model.CatName" />
+                }
+            </div><!-- col-8 -->
+        </div><!-- row -->
+        <div class="row no-gutters">
+            <div class="col-5 col-sm-4">
+                cover:
+            </div><!-- col-4 -->
+            <div class="col-7 col-sm-8">
+                @if (!string.IsNullOrEmpty(Model.Icon))
+                {
+                    <img width="80" height="80" src="~/images/covers/@Model.Cover" alt="@Model.CatName" />
+                }
+            </div><!-- col-8 -->
+        </div><!-- row -->
+        <div class="row no-gutters">
+            <div class="col-5 col-sm-4">
+                Thumb:
+            </div><!-- col-4 -->
+            <div class="col-7 col-sm-8">
+                @if (!string.IsNullOrEmpty(Model.Icon))
+                {
+                    <img width="80" height="80" src="~/images/icons/@Model.Thumb" alt="@Model.CatName" />
+                }
+            </div><!-- col-8 -->
+        </div><!-- row --><div class="row no-gutters">
+            <div class="col-5 col-sm-4">
+               Desciption:
+            </div><!-- col-4 -->
+            <div class="col-7 col-sm-8">
+                <input asp-for="Desciption" class="form-control" type="text">
+            </div><!-- col-8 -->
+        </div><!-- row -->
+    </div><!-- form-layout -->
+    <div style="text-align:center !important" class="form-layout-footer mg-t-30">
+        <a asp-area="Admin" asp-controller="Categories" asp-action="Index" class="btn btn-success bd-0">Xem lại danh sách</a>
+        <a asp-area="Admin" asp-controller="Categories" asp-action="Index" asp-route-id="@Model.CatId" class="btn btn-success bd-0">Chỉnh sửa</a>
+
+    </div>
+</div><!-- section-wrapper -->
+<
