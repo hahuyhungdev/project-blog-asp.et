@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net;
+using System.Numerics;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -10,29 +12,36 @@ namespace WebDemo.Helpers
 {
     public static class Utilities
     {
-
-        public static string ToVnd(this double donGia)
-        {
-            return donGia.ToString("#,##0") + " đ";
-        }
-
-        public static string ToUrlFriendly(this string url)
-        {
-            var result = url.ToLower().Trim();
-            result = Regex.Replace(result, "áàạảãâấầậẩẫăắằặẳẵ", "a");
-            result = Regex.Replace(result, "éèẹẻẽêếềệểễ", "e");
-            result = Regex.Replace(result, "óòọỏõôốồộổỗơớờợởỡ", "o");
-            result = Regex.Replace(result, "úùụủũưứừựửữ", "u");
-            result = Regex.Replace(result, "íìịỉĩ", "i");
-            result = Regex.Replace(result, "ýỳỵỷỹ", "y");
-            result = Regex.Replace(result, "đ", "d");
-            result = Regex.Replace(result, "[^a-z0-9-]", "");
-            result = Regex.Replace(result, "(-)+", "-");
-
-            return result;
-        }
         public static int PAGE_SIZE = 20;
+        public static string SEOUrl(string url)
+        {
+            url = url.ToLower().Trim();
+            url = Regex.Replace(url, "áàạảãâấầậẩẫăắằặẳẵ", "a");
+            url = Regex.Replace(url, "éèẹẻẽêếềệểễ", "e");
+            url = Regex.Replace(url, "óòọỏõôốồộổỗơớờợởỡ", "o");
+            url = Regex.Replace(url, "úùụủũưứừựửữ", "u");
+            url = Regex.Replace(url, "íìịỉĩ", "i");
+            url = Regex.Replace(url, "ýỳỵỷỹ", "y");
+            url = Regex.Replace(url, "đ", "d");
+            //url = Regex.Replace(url, "[^a-z0-9-]", "");
+            // url = Regex.Replace(url, "(-)+", "-");
 
+            url = Regex.Replace(url.Trim(), @"[^0-9a-z-\s]", "").Trim();
+            url = Regex.Replace(url.Trim(), @"\s+", "-");
+            url = Regex.Replace(url, @"\s", "-");
+            while (true)
+            {
+                if (url.IndexOf("--") != -1)
+                {
+                    url = url.Replace("-", "-");
+                }
+                else
+                {
+                    break;
+                }
+            }
+            return url;
+        }
         public static string GetRandomKey(int length = 5)
         {
             //chuỗi mẫu (pattern)
@@ -79,6 +88,7 @@ namespace WebDemo.Helpers
             }
         }
 
+       
     }
 
 }
