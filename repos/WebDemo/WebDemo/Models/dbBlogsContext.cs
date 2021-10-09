@@ -26,6 +26,7 @@ namespace WebDemo.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
                 optionsBuilder.UseSqlServer("Server=XTEAM;Database=dbBlogs; Integrated Security=True;");
             }
         }
@@ -66,32 +67,31 @@ namespace WebDemo.Models
 
             modelBuilder.Entity<Category>(entity =>
             {
-                entity.HasKey(e => e.CatId);
+                entity.HasKey(e => e.CatId)
+                    .HasName("PK__Categori__6A1C8ADA407CC16A");
 
                 entity.Property(e => e.CatId).HasColumnName("CatID");
 
-                entity.Property(e => e.Alias).HasMaxLength(50);
+                entity.Property(e => e.Alias).HasMaxLength(255);
 
-                entity.Property(e => e.CatName).HasMaxLength(50);
+                entity.Property(e => e.CatName).HasMaxLength(255);
 
-                entity.Property(e => e.Cover).HasMaxLength(50);
+                entity.Property(e => e.Cover).HasMaxLength(255);
 
-                entity.Property(e => e.Desciption).HasMaxLength(50);
+                entity.Property(e => e.Icon).HasMaxLength(255);
 
-                entity.Property(e => e.Icon).HasMaxLength(50);
+                entity.Property(e => e.MetaDesc).HasMaxLength(255);
 
-                entity.Property(e => e.MetaDesc).HasMaxLength(50);
+                entity.Property(e => e.MetaKey).HasMaxLength(255);
 
-                entity.Property(e => e.MetaKey).HasMaxLength(50);
+                entity.Property(e => e.Thumb).HasMaxLength(255);
 
-                entity.Property(e => e.Thumb).HasMaxLength(50);
-
-                entity.Property(e => e.Title).HasMaxLength(50);
+                entity.Property(e => e.Title).HasMaxLength(255);
             });
 
             modelBuilder.Entity<Post>(entity =>
             {
-                entity.HasNoKey();
+                entity.Property(e => e.PostId).HasColumnName("PostID");
 
                 entity.Property(e => e.AccountId).HasColumnName("AccountID");
 
@@ -101,15 +101,15 @@ namespace WebDemo.Models
 
                 entity.Property(e => e.CatId).HasColumnName("CatID");
 
-                entity.Property(e => e.CreateData).HasColumnType("datetime");
+                entity.Property(e => e.CreateDate).HasColumnType("datetime");
 
                 entity.Property(e => e.IsHot).HasColumnName("isHot");
 
                 entity.Property(e => e.IsNewfeed).HasColumnName("isNewfeed");
 
-                entity.Property(e => e.PostId)
-                    .ValueGeneratedOnAdd()
-                    .HasColumnName("PostID");
+                entity.Property(e => e.MetaDesc).HasMaxLength(50);
+
+                entity.Property(e => e.MetaKey).HasMaxLength(50);
 
                 entity.Property(e => e.Scontent)
                     .HasMaxLength(255)
@@ -119,13 +119,15 @@ namespace WebDemo.Models
 
                 entity.Property(e => e.Title).HasMaxLength(255);
 
+                entity.Property(e => e.Xem).HasMaxLength(50);
+
                 entity.HasOne(d => d.Account)
-                    .WithMany()
+                    .WithMany(p => p.Posts)
                     .HasForeignKey(d => d.AccountId)
                     .HasConstraintName("FK_Posts_Accounts");
 
                 entity.HasOne(d => d.Cat)
-                    .WithMany()
+                    .WithMany(p => p.Posts)
                     .HasForeignKey(d => d.CatId)
                     .HasConstraintName("FK_Posts_Categories");
             });

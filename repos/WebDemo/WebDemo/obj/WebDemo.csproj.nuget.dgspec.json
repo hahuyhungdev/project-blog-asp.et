@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\backup\\GitHub\\soucre\\repos\\WebDemo\\WebDemo\\WebDemo.csproj": {}
+    "D:\\backup\\GitHub\\source\\repos\\WebDemo\\WebDemo\\WebDemo.csproj": {}
   },
   "projects": {
-    "D:\\backup\\GitHub\\soucre\\repos\\WebDemo\\WebDemo\\WebDemo.csproj": {
+    "D:\\backup\\GitHub\\source\\repos\\WebDemo\\WebDemo\\WebDemo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\backup\\GitHub\\soucre\\repos\\WebDemo\\WebDemo\\WebDemo.csproj",
+        "projectUniqueName": "D:\\backup\\GitHub\\source\\repos\\WebDemo\\WebDemo\\WebDemo.csproj",
         "projectName": "WebDemo",
-        "projectPath": "D:\\backup\\GitHub\\soucre\\repos\\WebDemo\\WebDemo\\WebDemo.csproj",
+        "projectPath": "D:\\backup\\GitHub\\source\\repos\\WebDemo\\WebDemo\\WebDemo.csproj",
         "packagesPath": "C:\\Users\\Zero Ca\\.nuget\\packages\\",
-        "outputPath": "D:\\backup\\GitHub\\soucre\\repos\\WebDemo\\WebDemo\\obj\\",
+        "outputPath": "D:\\backup\\GitHub\\source\\repos\\WebDemo\\WebDemo\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Zero Ca\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -42,21 +42,21 @@
           "dependencies": {
             "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
               "target": "Package",
-              "version": "[5.0.9, )"
+              "version": "[5.0.7, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[5.0.9, )"
+              "version": "[5.0.10, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[5.0.9, )"
+              "version": "[5.0.10, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[5.0.9, )"
+              "version": "[5.0.10, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",

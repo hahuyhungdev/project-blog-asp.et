@@ -1,0 +1,135 @@
+﻿@model WebDemo.Models.Post
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+@section Styles {
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+    <link href="~/AdminAssets/lib/select2/css/select2.min.css" rel="stylesheet">
+}
+<div class="slim-pageheader">
+    <ol class="breadcrumb slim-breadcrumb">
+        <li class="breadcrumb-item"><a asp-area="Admin" asp-controller="Home" asp-action="Index">HOME</a></li>
+        <li class="breadcrumb-item"><a asp-area="Admin" asp-controller="Posts" asp-action="Index">DANH SÁCH TIN ĐĂNG</a></li>
+        <li class="breadcrumb-item active" aria-current="page">TẠO MỚI TIN ĐĂNG</li>
+    </ol>
+    <h6 class="slim-pagetitle">TẠO MỚI TIN ĐĂNG</h6>
+</div><!-- slim-pageheader -->
+
+<div class="section-wrapper">
+    <div class="form-layout">
+        <form asp-area="Admin" asp-controller="Posts" asp-action="Create" method="post" enctype="multipart/form-data">
+            <div class="row mg-b-25">
+                <div class="col-lg-4">
+                    <div class="form-group">
+                        <label class="form-control-label">TIÊU ĐỀ: <span class="tx-danger">*</span></label>
+                        <input class="form-control" type="text" asp-for="Title">
+                    </div>
+                </div><!-- col-6 -->
+
+
+
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <label class="form-control-label">Mieu ta ngan: <span class="tx-danger">*</span></label>.
+                        <input class="form-control select2" type="text" maxlength="254" asp-for="Scontent">
+                    </div>
+                </div><!-- col-6 -->
+                <div class="col-lg-4">
+                    <div class="form-group">
+                        <label class="form-control-label">DANH MUC <span class="tx-danger">*</span></label>
+                        <select class="form-control select2" asp-for="CatId" asp-items="@ViewBag.DanhMuc" required>
+                            <option label="DANH MUC"></option>
+                        </select>
+                    </div>
+                </div><!-- col-4 -->
+
+                <div class="col-lg-6">
+                    <div class="form-group mg-b-10-force">
+                        <label class="form-control-label">ẢNH ĐẠI DIỆN: <span class="tx-danger">*</span></label>
+                        <input name="fThumb" type="file" class="form-control-file" asp-for="Thumb">
+                    </div>
+                </div><!-- col-6 -->
+
+                <hr />
+                <div class="col-lg-12">
+                    <div class="form-group mg-b-10-force">
+                        <label class="form-control-label">TAG <span class="tx-danger">*</span></label>
+                        <input class="form-control" type="text" asp-for="Tags">
+                    </div>
+                </div>
+                <br />
+                <div class="col-lg-12">
+                    <div class="form-group mg-b-10-force">
+                        <label class="form-control-label">MO TA <span class="tx-danger">*</span></label>
+                        <textarea asp-for="Contents"></textarea>
+                    </div>
+                </div>
+                @*
+        <div class="col-lg-4">
+            <div class="form-group mg-10-force">
+                <input type="checkbox" asp-for="Published"><span>Published</span>
+                <span>IsHot</span>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="form-group mg-10-force">
+                <input type="checkbox" asp-for="IsHot"><span>Published</span>
+                <span>IsHot</span>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="form-group mg-10-force">
+                <input type="checkbox" asp-for="IsNewfeed"><span>Published</span>
+                <span>IsNewfeed</span>
+            </div>
+        </div>
+                *@
+                @*
+        <div class="form-group">
+                            <label>TRẠNG THÁI</label>
+                            <br />
+                            <input class="form-check-input" type="checkbox" data-val="true" data-val-required="The Published field is required." id="Published" name="Published" value="true"> Published
+                        </div>
+                            <div class="col-lg-4">
+                                <div class="form-group mg-10-force">
+                                    <input type="checkbox" asp-for="IsHot">
+                                    <span>IsHot</span>
+                                </div>
+                            </div><!-- col-4 -->
+                            <div class="col-lg-4">
+                                <div class="form-group mg-10-force">
+                                    <input type="checkbox" asp-for="IsNewfeed">
+                                    <span>IsNewfeed</span>
+                                </div>
+                            </div><!-- col-4 -->*@
+            </div>
+
+            <div style="text-align:center !important" class="form-layout-footer">
+                <button class="btn btn-primary bd-0">DANG TIN</button>
+                <button class="btn btn-secondary bd-0">Cancel</button>
+            </div><!-- form-layout-footer -->
+        </form>
+    </div><!-- form-layout -->
+</div>
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+    <script src="~/AdminAssets/lib/select2/css/select2.min.js"></script>
+    <script>
+        jQuery(document).ready(function () {
+            $('#Contents').summernote({
+                fontNames: ['Arial', 'Arial Black', 'Comic Sans MS', 'Courier New'],
+                styleTag: ['p', 'h1', 'h2', 'h3', 'h4', 'h5'],
+                height: 200,
+                minHeight: null,
+                maxHeight: null,
+                focus: true
+            });
+        });
+    </script>
+}

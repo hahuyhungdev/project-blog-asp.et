@@ -1,0 +1,69 @@
+﻿@model WebDemo.Models.Post
+
+@{
+    ViewData["Title"] = "XÁC NHẬN XÓA QUYỀN TRUY CẬP";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="slim-pageheader">
+    <ol class="breadcrumb slim-breadcrumb">
+        <li class="breadcrumb-item"><a asp-area="Admin" asp-controller="Home" asp-action="Index">HOME</a></li>
+        <li class="breadcrumb-item"><a asp-area="Admin" asp-controller="Posts" asp-action="Index">DANH SÁCH QUYỀN TRUY CẬP</a></li>
+        <li class="breadcrumb-item active" aria-current="page">XÁC NHẬN XÓA QUYỀN TRUY CẬP</li>
+    </ol>
+    <h6 class="slim-pagetitle">XÁC NHẬN XÓA QUYỀN TRUY CẬP</h6>
+</div><!-- slim-pageheader -->
+<div class="section-wrapper mg-t-20">
+    <label class="section-title">XÁC NHẬN XÓA QUYỀN TRUY CẬP</label>
+
+    <div class="form-layout form-layout-7">
+        <div class="row no-gutters">
+            <div class="col-5 col-sm-4">
+                ID:
+            </div><!-- col-4 -->
+            <div class="col-7 col-sm-8">
+                <input asp-for="PostId" class="form-control" type="text">
+            </div><!-- col-8 -->
+        </div><!-- row -->
+        <div class="row no-gutters">
+            <div class="col-5 col-sm-4">
+                Tieu De:
+            </div><!-- col-4 -->
+            <div class="col-7 col-sm-8">
+                <input asp-for="Title" class="form-control" type="text">
+            </div><!-- col-8 -->
+        </div><!-- row -->
+        <div class="row no-gutters">
+            <div class="col-5 col-sm-4">
+                Ngay dang:
+            </div><!-- col-4 -->
+            <div class="col-7 col-sm-8">
+                <input asp-for="CreateDate" class="form-control" type="text">
+            </div><!-- col-8 -->
+        </div><!-- row -->
+        <div class="row no-gutters">
+            <div class="col-5 col-sm-4">
+                Danh Muc:
+            </div><!-- col-4 -->
+            <div class="col-7 col-sm-8">
+                <input asp-for="Cat.CatName" class="form-control" type="text">
+            </div><!-- col-8 -->
+        </div><!-- row -->
+        <div class="row no-gutters">
+            <div class="col-5 col-sm-4">
+                Tac Gia:
+            </div><!-- col-4 -->
+            <div class="col-7 col-sm-8">
+                <input asp-for="@Model.Author" class="form-control" type="text">
+            </div><!-- col-8 -->
+        </div><!-- row -->
+    </div><!-- form-layout -->
+    <div style="text-align:center !important" class="form-layout-footer mg-t-30">
+        <form asp-action="Admin" asp-action="Delete" asp-route-id="@Model.PostId">
+            <input type="hidden" asp-for="PostId" />
+            <input type="submit" value="Xác nhận xóa" class="btn btn-danger" /> |
+            <a asp-area="Admin" asp-controller="Posts" asp-action="Index" class="btn btn-success bd-0">Trở về danh sách</a>
+        </form>
+    </div>
+</div><!-- section-wrapper -->
+<

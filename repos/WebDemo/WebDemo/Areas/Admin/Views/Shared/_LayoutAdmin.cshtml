@@ -36,6 +36,7 @@
     <!-- Slim CSS -->
     <link rel="stylesheet" href="~/css/slim.css">
     <link href="~/AdminAssets/css/slim.css" rel="stylesheet" />
+    @await RenderSectionAsync("Styles", required: false)
 </head>
 <body>
     <div class="slim-header">
@@ -232,7 +233,7 @@
 
     <div class="slim-mainpanel">
         <div class="container">
-          @RenderBody()
+            @RenderBody()
 
         </div><!-- container -->
     </div><!-- slim-mainpanel -->
@@ -256,5 +257,6 @@
     <script src="~/js/ResizeSensor.js"></script>
     <script src="~/js/dashboard.js"></script>
     <script src="~/js/slim.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

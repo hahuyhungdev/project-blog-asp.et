@@ -7,6 +7,11 @@ namespace WebDemo.Models
 {
     public partial class Account
     {
+        public Account()
+        {
+            Posts = new HashSet<Post>();
+        }
+
         public int AccountId { get; set; }
         public string FullName { get; set; }
         public string Email { get; set; }
@@ -19,5 +24,6 @@ namespace WebDemo.Models
         public DateTime? LastLogin { get; set; }
 
         public virtual Role Role { get; set; }
+        public virtual ICollection<Post> Posts { get; set; }
     }
 }

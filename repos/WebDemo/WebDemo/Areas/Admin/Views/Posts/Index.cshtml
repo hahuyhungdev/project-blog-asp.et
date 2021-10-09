@@ -1,0 +1,66 @@
+﻿@using PagedList.Core.Mvc
+@model IEnumerable<WebDemo.Models.Post>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+<div class="slim-pageheader">
+    <ol class="breadcrumb slim-breadcrumb">
+        <li class="breadcrumb-item"><a asp-area="Admin" asp-controller="Home" asp-action="Index">HOME</a></li>
+        <li class="breadcrumb-item"><a asp-area="Admin" asp-controller="Posts" asp-action="Index">QUẢN LÍ QUYỀN TRUY CẬP</a></li>
+        <li class="breadcrumb-item"><a asp-area="Admin" asp-controller="Posts" asp-action="Create">TẠO MỚI TIN TỨC</a></li>
+    </ol>
+    <h6 class="slim-pagetitle">QUẢN LÍ TIN TỨC</h6>
+</div><!-- slim-pageheader -->
+<div class="section-wrapper">
+    <div class="table-responsive">
+        <table class="table mg-b-0">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>TITLE</th>
+                    <th>DANH MỤC</th>
+                    <th>TRẠNG THÁI</th>
+                    <th>SẮP XẾP</th>
+                    <th>#</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model != null && Model.Count() > 0)
+                {
+                    foreach (var item in Model)
+                    {
+                        string url = $"/{item.Alias}.html";
+                <tr>
+                    <th scope="row">@item.PostId</th>
+                    <td>
+                        <a href="/@url">@item.Title</a>
+                    </td>
+                    @*
+            <td>
+            <a href="/@item.Cat.Alias">@item.Cat.CatName</a>
+        </td>
+                    *@
+                    <td>
+                        @if (item.Published == true)
+                        {
+                            <span class="badge badge-primary">Public</span>
+                        }
+                        else
+                        {
+                            <span class="badge badge-primary">NON-public</span>
+                        }
+                    </td>
+                    <td>
+                        <a asp-area="Admin" asp-controller="Posts" asp-action="Details" asp-route-id="@item.PostId" class="btn btn-success">View</a>
+                        <a asp-area="Admin" asp-controller="Posts" asp-action="Edit" asp-route-id="@item.PostId" class="btn btn-primary">Edit</a>
+                        <a asp-area="Admin" asp-controller="Posts" asp-action="Delete" asp-route-id="@item.PostId" class="btn btn-danger">Delete</a>
+                    </td>
+                </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div><!-- table-responsive -->
+</div><!-- section-wrapper -->
