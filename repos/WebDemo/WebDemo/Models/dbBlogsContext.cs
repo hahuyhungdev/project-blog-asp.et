@@ -68,7 +68,7 @@ namespace WebDemo.Models
             modelBuilder.Entity<Category>(entity =>
             {
                 entity.HasKey(e => e.CatId)
-                    .HasName("PK__Categori__6A1C8ADA407CC16A");
+                    .HasName("PK_Categoriesss_1");
 
                 entity.Property(e => e.CatId).HasColumnName("CatID");
 
