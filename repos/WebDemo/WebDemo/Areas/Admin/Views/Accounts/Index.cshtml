@@ -1,0 +1,69 @@
+﻿@using PagedList.Core.Mvc
+@model PagedList.Core.IPagedList<WebDemo.Models.Account>
+@{
+    ViewData["Title"] = "QUẢN LÍ TÀI KHOẢN";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+<div class="slim-pageheader">
+    <ol class="breadcrumb slim-breadcrumb">
+        s
+        <li class="breadcrumb-item"><a asp-area="Admin" asp-controller="Home" asp-action="Index">HOME</a></li>
+        <li class="breadcrumb-item"><a asp-area="Admin" asp-controller="Account" asp-action="Index">Danh sách tài khoản</a></li>
+        <li class="breadcrumb-item"><a asp-area="Admin" asp-controller="Account" asp-action="Create">TẠO MỚI Tài Khoản</a></li>
+    </ol>
+    <h6 class="slim-pagetitle">QUẢN LÍ TÀI KHOẢN</h6>
+</div><!-- slim-pageheader -->
+
+<div class="section-wrapper">
+    <div class="table-responsive">
+        <table class="table mg-b-0">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>HỌ VÀ TÊN</th>
+                    <th>TRẠNG THÁI</th>
+                    <th>QUYỀN TRUY CẬP</th>
+                    <th>#</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model != null && Model.Count > 0)
+                {
+                    foreach (var item in Model)
+                    {
+                <tr>
+                    <th scope="row">@item.AccountId</th>
+                    <td>
+                        <p>Họ và tên : @item.FullName</p>
+                        <p>Email : @item.Email</p>
+                        <p>Phone : @item.Phone</p>
+                        <p>Last Login : @item.LastLogin</p>
+                    </td>
+                    <td>
+                        @if (item.Active == true)
+                        {
+                            <span class="badge badge-primary">Active</span>
+                        }
+                        else
+                        {
+                            <span class="badge badge-primary">Block</span>
+                        }
+
+                    </td>
+                    @*       <td>@item.Role.RoleDescription</td>*@
+                    <td>
+                        <a asp-area="Admin" asp-controller="Accounts" asp-action="Details" asp-route-id="@item.AccountId" class="btn btn-success">View</a>
+                        <a asp-area="Admin" asp-controller="Accounts" asp-action="Edit" asp-route-id="@item.AccountId" class="btn btn-primary">Edit</a>
+                        <a asp-area="Admin" asp-controller="Accounts" asp-action="Delete" asp-route-id="@item.AccountId" class="btn btn-danger">Delete</a>
+                    </td>
+                </tr>
+                    }
+                }
+
+            </tbody>
+        </table>
+        <div aria-label="Page navigation example">
+
+        </div>
+    </div><!-- table-responsive -->
+</div><!-- section-wrapper -->
