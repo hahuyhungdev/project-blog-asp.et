@@ -1,0 +1,22 @@
+﻿@model WebDemo.Areas.Admin.Models.LoginViewModel
+@{
+    ViewData["Title"] = "Đăng nhập hệ thống";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdminLogin.cshtml";
+}
+
+<form asp-area="Admin" asp-controller="Accounts" asp-action="Login" method="post">
+    <div class="signin-box">
+        <h2 class="slim-logo"><a href="/">Blog<span>.</span></a></h2>
+        <h2 class="signin-title-primary">Welcome back!</h2>
+        <h3 class="signin-title-secondary">Sign in to continue.</h3>
+
+        <div class="form-group">
+            <input type="text" class="form-control" asp-for="Email" placeholder="Enter your email">
+        </div><!-- form-group -->
+        <div class="form-group mg-b-50">
+            <input type="password" class="form-control" asp-for="Password" placeholder="Enter your password">
+        </div><!-- form-group -->
+        <button class="btn btn-primary btn-block btn-signin">đăng nhập</button>
+        <p class="mg-b-0"> @ViewBag.Eror</p>
+    </div><!-- signin-box -->
+</form>

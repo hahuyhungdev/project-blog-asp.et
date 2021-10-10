@@ -13,11 +13,11 @@ using System.Text.Unicode;
 using System.Threading.Tasks;
 using WebDemo.Models;
 
+
 namespace WebDemo
 {
     public class Startup
     {
-        private object config;
 
         public Startup(IConfiguration configuration)
         {
@@ -56,6 +56,7 @@ namespace WebDemo
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            app.UseSession();  // <=login
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

@@ -906,3 +906,5 @@ D:\backup\GitHub\source\repos\WebDemo\WebDemo\obj\Debug\net5.0\Razor\Areas\Admin
 D:\backup\GitHub\source\repos\WebDemo\WebDemo\obj\Debug\net5.0\Razor\Areas\Admin\Views\Accounts\Details.cshtml.g.cs
 D:\backup\GitHub\source\repos\WebDemo\WebDemo\obj\Debug\net5.0\Razor\Areas\Admin\Views\Accounts\Edit.cshtml.g.cs
 D:\backup\GitHub\source\repos\WebDemo\WebDemo\obj\Debug\net5.0\Razor\Areas\Admin\Views\Accounts\Index.cshtml.g.cs
+D:\backup\GitHub\source\repos\WebDemo\WebDemo\obj\Debug\net5.0\Razor\Areas\Admin\Views\Shared\_LayoutAdminLogin.cshtml.g.cs
+D:\backup\GitHub\source\repos\WebDemo\WebDemo\obj\Debug\net5.0\Razor\Areas\Admin\Views\Accounts\Login.cshtml.g.cs
