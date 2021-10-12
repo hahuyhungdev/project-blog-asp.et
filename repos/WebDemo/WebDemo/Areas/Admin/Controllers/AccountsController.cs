@@ -73,8 +73,9 @@ namespace WebDemo.Areas.Admin.Controllers
                     {
                         ViewBag.Error = "Thông tin đăng nhập chưa chính xác";
                     }
-                    string pass = (model.Password.Trim() + kh.Salt.Trim());
-                    if(kh.Password.Trim() != pass)
+                    string pass = (model.Password.Trim());
+                    // + kh.Salt.Trim()
+                    if (kh.Password.Trim() != pass)
                     {
                         ViewBag.Error = "Thông tin đăng nhập chưa chính xác";
                         return View(model);
@@ -120,6 +121,24 @@ namespace WebDemo.Areas.Admin.Controllers
 
         }
 
+
+
+
+
+        [Route("dang-xuat.html", Name = "Logout")]
+        public IActionResult Logout()
+        {
+            try
+            {
+                HttpContext.SignOutAsync();
+                HttpContext.Session.Remove("AccountId");
+                return RedirectToAction("index", "Home");
+            }
+            catch
+            {
+                return RedirectToAction("index", "Home");
+            }
+        }
 
         // GET: Admin/Accounts/Details/5
         public async Task<IActionResult> Details(int? id)
