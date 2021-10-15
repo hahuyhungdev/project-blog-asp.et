@@ -54,7 +54,7 @@ namespace WebDemo.Areas.Admin.Controllers
                .OrderByDescending(x => x.CatId)
                .ToList();
             }
-            PagedList<Post> models = new PagedList<Post>(lsPosts.AsEnumerable(), pageNumber, pageSize);
+            PagedList<Post> models = new PagedList<Post>(lsPosts.AsQueryable(), pageNumber, pageSize);
             return View(models);
         }
 

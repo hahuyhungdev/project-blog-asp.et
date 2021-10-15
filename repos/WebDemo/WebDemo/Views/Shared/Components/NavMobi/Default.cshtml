@@ -1,0 +1,13 @@
+﻿@model List<Category>
+@if (Model != null)
+{
+    
+        <ul class="submenu">
+            @foreach (var item in Model)
+            {
+                <li><a href="/@item.Alias">@item.CatName</a> </li>
+            }
+        </ul>
+
+
+}

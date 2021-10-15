@@ -1,0 +1,38 @@
+﻿@model List<Post>
+@if (Model != null)
+{
+    <div class="widget rounded">
+        <div class="widget-header text-center">
+            <h3 class="widget-title">Popular Posts</h3>
+            <img src="~/images/wave.svg" class="wave" alt="wave" />
+        </div>
+        <div class="widget-content">
+            @if (Model != null && Model.Count >0 )
+            {
+                int i = 0;
+                    foreach (var item in Model)
+                {
+                    i++;
+                    string url = $"/{item.Alias}.html";
+                    <!--posts-->
+                    <div class="post post-list-sm circle">
+                        <div class="thumb circle">
+                            <span class="number">@i</span>
+                            <a href="@url">
+                               <div class="inner">
+                                   <img src="~/images/news/@item.Thumb" alt="@item.Title" />
+                               </div>
+                            </a>
+                        </div>
+                        <div class="detail clearfix">
+                            <h6 class="post-title my-0"><a href="@url">@item.Title</a></h6>
+                            <ul class="meta list-inline mt-1 mb-0">
+                                <li class="list-inline-item">@item.CreateDate.Value.ToString("dd MMMM yyyy")</li>
+                            </ul>
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+}

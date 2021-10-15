@@ -908,3 +908,9 @@ D:\backup\GitHub\source\repos\WebDemo\WebDemo\obj\Debug\net5.0\Razor\Areas\Admin
 D:\backup\GitHub\source\repos\WebDemo\WebDemo\obj\Debug\net5.0\Razor\Areas\Admin\Views\Accounts\Index.cshtml.g.cs
 D:\backup\GitHub\source\repos\WebDemo\WebDemo\obj\Debug\net5.0\Razor\Areas\Admin\Views\Shared\_LayoutAdminLogin.cshtml.g.cs
 D:\backup\GitHub\source\repos\WebDemo\WebDemo\obj\Debug\net5.0\Razor\Areas\Admin\Views\Accounts\Login.cshtml.g.cs
+D:\backup\GitHub\source\repos\WebDemo\WebDemo\obj\Debug\net5.0\Razor\Views\Shared\_RightPartialView.cshtml.g.cs
+D:\backup\GitHub\source\repos\WebDemo\WebDemo\obj\Debug\net5.0\Razor\Views\Shared\Components\Categories\Default.cshtml.g.cs
+D:\backup\GitHub\source\repos\WebDemo\WebDemo\obj\Debug\net5.0\Razor\Views\Shared\Components\NavMobi\Default.cshtml.g.cs
+D:\backup\GitHub\source\repos\WebDemo\WebDemo\obj\Debug\net5.0\Razor\Views\Shared\Components\Nav\Default.cshtml.g.cs
+D:\backup\GitHub\source\repos\WebDemo\WebDemo\obj\Debug\net5.0\Razor\Views\Shared\Components\Popular\Default.cshtml.g.cs
+D:\backup\GitHub\source\repos\WebDemo\WebDemo\obj\Debug\net5.0\Razor\Views\Shared\Components\Social\Default.cshtml.g.cs

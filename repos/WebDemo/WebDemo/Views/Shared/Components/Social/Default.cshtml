@@ -1,0 +1,26 @@
+﻿@model WebDemo.ModelsView.SocialVM
+@if (Model !=null )
+{
+<ul class="social-icons list-unstyled list-inline mb-0">
+    @if (!string.IsNullOrEmpty(Model.Facebook))
+    {
+        <li class="list-inline-item"><a href="@Model.Facebook"><i class="fab fa-facebook-f"></i></a></li>
+    }
+    @if (!string.IsNullOrEmpty(Model.Twitter))
+    {
+        <li class="list-inline-item"><a href="@Model.Twitter"><i class="fab fa-twitter"></i></a></li>
+    }
+    @if (!string.IsNullOrEmpty(Model.Instagram))
+    {
+        <li class="list-inline-item"><a href="@Model.Instagram"><i class="fab fa-instagram"></i></a></li>
+    }
+    @if (!string.IsNullOrEmpty(Model.Pinterest))
+    {
+        <li class="list-inline-item"><a href="@Model.Pinterest"><i class="fab fa-pinterest"></i></a></li>
+    }
+    @if (!string.IsNullOrEmpty(Model.Youtube))
+    {
+        <li class="list-inline-item"><a href="@Model.Youtube"><i class="fab fa-youtube"></i></a></li>
+    }
+</ul>
+}

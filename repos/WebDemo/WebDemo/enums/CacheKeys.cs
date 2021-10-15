@@ -5,7 +5,10 @@ using System.Threading.Tasks;
 
 namespace WebDemo.enums
 {
-    public class CacheKeys
+    public enum CacheKeys
     {
+        Categories,
+        Popular,
+        Social
     }
 }
