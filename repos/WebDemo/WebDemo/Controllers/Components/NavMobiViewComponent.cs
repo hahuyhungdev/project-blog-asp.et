@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Memory;
 using System;
 using System.Collections.Generic;
@@ -30,7 +31,7 @@ namespace WebDemo.Controllers.Components
         public List<Category> GetlsCategories()
         {
             List<Category> lstins = new List<Category>();
-            lstins = _context.Categories
+            lstins = _context.Categories.AsNoTracking()
                 .Where(x => x.Published == true)
                 .OrderBy(x => x.Ordering)
                 .ToList();

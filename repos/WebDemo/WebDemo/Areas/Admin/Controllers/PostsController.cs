@@ -43,12 +43,14 @@ namespace WebDemo.Areas.Admin.Controllers
             if(account.RoleId==2)
             {
                 lsPosts = _context.Posts
+                    .AsNoTracking()
                 .Include(p => p.Account).Include(p => p.Cat)
                 .OrderByDescending(x => x.CatId).ToList();
             }
             else
             {
                 lsPosts = _context.Posts
+                    .AsNoTracking()
                .Include(p => p.Account).Include(p => p.Cat)
                .Where(x=>x.AccountId==account.AccountId)
                .OrderByDescending(x => x.CatId)

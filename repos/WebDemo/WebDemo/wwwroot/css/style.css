@@ -45,10 +45,13 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.container-xl{
+    width: 80% !important;
+}
 
 img {
-  max-width: 100%;
-  height: auto;
+    max-width: 100%;
+    height: auto;
 }
 
 .text-center {
@@ -2190,8 +2193,10 @@ footer .footer-inner .copyright {
 .rounded {
   border-radius: 10px !important;
 }
-
-.bordered {
+.featured-post-lg .thumb .inner {
+    height: 400px !important;
+}
+    .bordered {
   border: solid 1px #EBEBEB;
 }
 

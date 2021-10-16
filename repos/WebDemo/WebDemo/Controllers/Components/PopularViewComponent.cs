@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Memory;
 using System;
 using System.Collections.Generic;
@@ -30,6 +31,7 @@ namespace WebDemo.Controllers.Components
         {
             List<Post> lstins = new List<Post>();
             lstins = _context.Posts
+                .AsNoTracking()
                 .Where(x => x.Published == true)
                 .OrderByDescending(x => x.Xem)
                 .Take(6)

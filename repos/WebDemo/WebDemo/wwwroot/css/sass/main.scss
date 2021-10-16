@@ -712,7 +712,7 @@ section {
         .inner {
             background-size: cover;
             background-position: center center;
-            height: 533px;
+            height: 400px;
             @include transition(.3s);
             @include transform(scale(1));
         }
