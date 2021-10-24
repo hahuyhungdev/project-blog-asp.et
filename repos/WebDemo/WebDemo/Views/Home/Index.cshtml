@@ -508,13 +508,9 @@
                     </div>
 
                     <!-- widget popular posts -->
-                    <div class="widget rounded">
-                        <div class="widget-header text-center">
-                            <h3 class="widget-title">Explore Topics</h3>
-                            <img src="images/wave.svg" class="wave" alt="wave" />
-                        </div>
-                        @await Component.InvokeAsync("Popular")
-                    </div>
+
+                    @await Component.InvokeAsync("Popular")
+
 
 
                     <!-- widget categories -->
@@ -616,7 +612,7 @@
                 </div>
 
             </div>
-   
+
         </div>
     </div>
 </section>

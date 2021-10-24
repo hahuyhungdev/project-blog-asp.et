@@ -913,3 +913,6 @@ D:\backup\GitHub\source\repos\WebDemo\WebDemo\obj\Debug\net5.0\Razor\Views\Share
 D:\backup\GitHub\source\repos\WebDemo\WebDemo\obj\Debug\net5.0\Razor\Views\Shared\Components\Nav\Default.cshtml.g.cs
 D:\backup\GitHub\source\repos\WebDemo\WebDemo\obj\Debug\net5.0\Razor\Views\Shared\Components\Popular\Default.cshtml.g.cs
 D:\backup\GitHub\source\repos\WebDemo\WebDemo\obj\Debug\net5.0\Razor\Views\Shared\Components\Social\Default.cshtml.g.cs
+D:\backup\GitHub\source\repos\WebDemo\WebDemo\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
+D:\backup\GitHub\source\repos\WebDemo\WebDemo\obj\Debug\net5.0\Razor\Views\Posts\Details.cshtml.g.cs
+D:\backup\GitHub\source\repos\WebDemo\WebDemo\obj\Debug\net5.0\Razor\Views\Posts\List.cshtml.g.cs

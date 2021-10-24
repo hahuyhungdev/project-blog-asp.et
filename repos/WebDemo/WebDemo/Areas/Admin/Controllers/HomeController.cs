@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 
 namespace WebDemo.Areas.Admin.Controllers
-{   
+{   [Route("admin.html", Name = "AdminIndex")]
     [Area("Admin")]
     [Authorize()]
     public class HomeController : Controller

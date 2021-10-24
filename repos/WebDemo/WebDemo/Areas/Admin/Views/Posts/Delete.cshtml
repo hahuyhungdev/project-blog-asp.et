@@ -59,7 +59,7 @@
         </div><!-- row -->
     </div><!-- form-layout -->
     <div style="text-align:center !important" class="form-layout-footer mg-t-30">
-        <form asp-action="Admin" asp-action="Delete" asp-route-id="@Model.PostId">
+        <form asp-action="Delete">
             <input type="hidden" asp-for="PostId" />
             <input type="submit" value="Xác nhận xóa" class="btn btn-danger" /> |
             <a asp-area="Admin" asp-controller="Posts" asp-action="Index" class="btn btn-success bd-0">Trở về danh sách</a>
