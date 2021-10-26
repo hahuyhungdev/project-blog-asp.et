@@ -34,6 +34,12 @@ namespace WebDemo.Controllers
             return View(model);
         }
 
+        [Route("lien-he.html",Name = "Contact")]
+        public IActionResult Contact()
+        {
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();
