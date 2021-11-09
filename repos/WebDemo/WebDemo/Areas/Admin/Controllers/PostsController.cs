@@ -112,7 +112,7 @@ namespace WebDemo.Areas.Admin.Controllers
                 {
                     string extension = Path.GetExtension(fThumb.FileName);
                     string Newname = Utilities.SEOUrl(post.Title) + extension;
-                    post.Thumb = await Utilities.UploadFile(fThumb, @"news\", Newname.ToLower());
+                    post.Thumb = await Utilities.UploadFile(fThumb, @"posts\", Newname.ToLower());
                 }
 
                 _context.Add(post);
@@ -170,7 +170,7 @@ namespace WebDemo.Areas.Admin.Controllers
                     {
                         string extension = Path.GetExtension(fThumb.FileName);
                         string Newname = Utilities.SEOUrl(post.Title) + extension;
-                        post.Thumb = await Utilities.UploadFile(fThumb, @"news\", Newname.ToLower());
+                        post.Thumb = await Utilities.UploadFile(fThumb, @"posts\", Newname.ToLower());
                     }
                     post.Alias = Utilities.SEOUrl(post.Title);
                     post.AccountId = account.AccountId;

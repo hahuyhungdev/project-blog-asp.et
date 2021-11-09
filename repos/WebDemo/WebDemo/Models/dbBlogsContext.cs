@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
@@ -143,6 +144,21 @@ namespace WebDemo.Models
             OnModelCreatingPartial(modelBuilder);
         }
 
+        internal Task SaveChangesAsync()
+        {
+            throw new NotImplementedException();
+        }
+
+        internal void Add(Post post)
+        {
+            throw new NotImplementedException();
+        }
+
         partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
+
+        internal void Update(Post post)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

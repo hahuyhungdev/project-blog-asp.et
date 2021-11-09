@@ -23,6 +23,8 @@ namespace WebDemo.Controllers
 
         public IActionResult Index()
         {
+            
+
             HomeViewModel model = new HomeViewModel();
             var ls = _context.Posts.Include(x => x.Cat).AsNoTracking().ToList();
             model.LatestPosts = ls;
