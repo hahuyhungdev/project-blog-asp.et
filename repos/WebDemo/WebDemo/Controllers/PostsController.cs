@@ -23,19 +23,35 @@ namespace WebDemo.Controllers
         // GET: Posts
         // GET: List
         [Route("{Alias}", Name = "ListTin")]
-        public IActionResult List(string Alias , int? page)
+        public IActionResult List(string Alias, int? page)
         {
             if (string.IsNullOrEmpty(Alias)) return RedirectToAction("Home", "Index");
             var danhmuc = _context.Categories.FirstOrDefault(x => x.Alias == Alias);
             if (danhmuc == null) return RedirectToAction("Home", "Index");
 
             var pageNumber = page == null || page <= 0 ? 1 : page.Value;
-            var pageSize = Utilities.PAGE_SIZE;
+            var pageSize = 5;
+            List<Post> lsPosts = new List<Post>();
 
-            var lsPosts = _context.Posts.Include(x => x.Cat)
-                  .AsNoTracking()
-                  .OrderByDescending(x => x.CreateDate);
-            PagedList<Post> models = new PagedList<Post>(lsPosts, pageNumber, pageSize);
+            if (!string.IsNullOrEmpty(Alias))
+            {
+                lsPosts = _context.Posts
+                .Include(x => x.Cat)
+                .Where(x => x.CatId == danhmuc.CatId)
+                 .AsNoTracking()
+                 .OrderByDescending(x => x.CreateDate)
+                 .ToList();
+            }
+            else
+            {
+                lsPosts = _context.Posts
+               .Include(x => x.Cat)
+                .AsNoTracking()
+                .OrderByDescending(x => x.CreateDate)
+                .ToList();
+            }
+
+            PagedList<Post> models = new PagedList<Post>(lsPosts.AsQueryable(), pageNumber, pageSize);
             ViewBag.CurrentPage = pageNumber;
             ViewBag.DanhMuc = danhmuc;
             return View(models);
