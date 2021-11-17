@@ -22,7 +22,7 @@
                 ID:
             </div><!-- col-4 -->
             <div class="col-7 col-sm-8">
-                <input asp-for="RoleId" class="form-control" type="text">
+                <input disabled disabled asp-for="RoleId" class="form-control" type="text">
             </div><!-- col-8 -->
         </div><!-- row -->
         <div class="row no-gutters">
@@ -30,7 +30,7 @@
                 Role Name:
             </div><!-- col-4 -->
             <div class="col-7 col-sm-8">
-                <input asp-for="RoleName" class="form-control" type="text">
+                <input disabled asp-for="RoleName" class="form-control" type="text">
             </div><!-- col-8 -->
         </div><!-- row -->
         <div class="row no-gutters">
@@ -38,9 +38,12 @@
                 RoleDescription:
             </div><!-- col-4 -->
             <div class="col-7 col-sm-8">
-                <input asp-for="RoleDescription" class="form-control" type="text">
+                <input disabled asp-for="RoleDescription" class="form-control" type="text">
             </div><!-- col-8 -->
         </div><!-- row -->
     </div><!-- form-layout -->
+    <div style="text-align:center !important" class="form-layout-footer mg-t-30">
+        <a asp-area="Admin" asp-controller="Categories" asp-action="Index" class="btn btn-success bd-0">Xem lại danh sách</a>
+    </div>
 </div><!-- section-wrapper -->
-<
+

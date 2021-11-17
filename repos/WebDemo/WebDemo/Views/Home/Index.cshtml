@@ -21,8 +21,10 @@
                             <h2 class="post-title"><a href="@url ">@Model.Featured.Title</a></h2>
                             <ul class="meta list-inline mb-0">
                                 <li class="list-inline-item"><a href="#">@Model.Featured.Author</a></li>
-                                @*                                <li class="list-inline-item">@Model.Featured.CreateDate.Value.ToString("dd MMMM yyyy")</li>
-                                *@
+                                @if (Model.Featured.CreateDate != null)
+                                {
+                                    <li class="list-inline-item">@Model.Featured.CreateDate.Value.ToString("dd-MM-yyyy")</li>
+                                }
                             </ul>
                         </div>
                         <a href="@url">
@@ -116,314 +118,141 @@
     <div class="container-xl">
 
         <div class="row gy-4">
+            @if (Model.Featured != null)
+            {
+                string url = $"/{Model.Featured.Alias}.html";
+                <div class="col-lg-8">
+                     
+    <!-- section header -->
+                   <div class="section-header">
+                       <h3 class="section-title">Editor’s Pick</h3>
+                   </div>
 
-            <div class="col-lg-8">
+    <div class="padding-30 rounded bordered">
+        <div class="row gy-5">
+            <div class="col-sm-6">
+                <!-- post -->
+                <div class="post">
+                    <div class="thumb rounded">
+                        <a href="/@Model.Featured.Alias" class="category-badge">@Model.Featured.Cat.CatName</a>
+                        <h4 class="post-title"><a href="@url ">@Model.Featured.Title</a></h4>
 
-                <!-- section header -->
-                <div class="section-header">
-                    <h3 class="section-title">Editor’s Pick</h3>
-                    <img src="images/wave.svg" class="wave" alt="wave" />
-                </div>
-
-                <div class="padding-30 rounded bordered">
-                    <div class="row gy-5">
-                        <div class="col-sm-6">
-                            <!-- post -->
-                            <div class="post">
-                                <div class="thumb rounded">
-                                    <a href="#" class="category-badge position-absolute">Lifestyle</a>
-                                    <span class="post-format">
-                                        <i class="icon-picture"></i>
-                                    </span>
-                                    <a href="#">
-                                        <div class="inner">
-                                            <img src="images/posts/editor-lg.jpg" alt="post-title" />
-                                        </div>
-                                    </a>
-                                </div>
-                                <ul class="meta list-inline mt-4 mb-0">
-                                    <li class="list-inline-item"><a href="#"><img src="images/other/author-sm.png" class="author" alt="author" />Katen Doe</a></li>
-                                    <li class="list-inline-item">29 March 2021</li>
-                                </ul>
-                                <h5 class="post-title mb-3 mt-3"><a href="#">15 Unheard Ways To Achieve Greater Walker</a></h5>
-                                <p class="excerpt mb-0">A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy</p>
-                            </div>
+                        <div class="inner">
+                            <img src="images/posts/from-home-hiu-qu-hn-bao-gi-ht-cng-hp-probook-400-series-g8.jpg" alt="post-title" />
                         </div>
-                        <div class="col-sm-6">
-                            <!-- post -->
-                            <div class="post post-list-sm square">
-                                <div class="thumb rounded">
-                                    <a href="#">
-                                        <div class="inner">
-                                            <img src="images/posts/editor-sm-1.jpg" alt="post-title" />
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="details clearfix">
-                                    <h6 class="post-title my-0"><a href="#">3 Easy Ways To Make Your iPhone Faster</a></h6>
-                                    <ul class="meta list-inline mt-1 mb-0">
-                                        <li class="list-inline-item">29 March 2021</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <!-- post -->
-                            <div class="post post-list-sm square">
-                                <div class="thumb rounded">
-                                    <a href="#">
-                                        <div class="inner">
-                                            <img src="images/posts/editor-sm-2.jpg" alt="post-title" />
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="details clearfix">
-                                    <h6 class="post-title my-0"><a href="#">An Incredibly Easy Method That Works For All</a></h6>
-                                    <ul class="meta list-inline mt-1 mb-0">
-                                        <li class="list-inline-item">29 March 2021</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <!-- post -->
-                            <div class="post post-list-sm square">
-                                <div class="thumb rounded">
-                                    <a href="#">
-                                        <div class="inner">
-                                            <img src="images/posts/editor-sm-3.jpg" alt="post-title" />
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="details clearfix">
-                                    <h6 class="post-title my-0"><a href="b#">10 Ways To Immediately Start Selling Furniture</a></h6>
-                                    <ul class="meta list-inline mt-1 mb-0">
-                                        <li class="list-inline-item">29 March 2021</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <!-- post -->
-                            <div class="post post-list-sm square">
-                                <div class="thumb rounded">
-                                    <a href="#">
-                                        <div class="inner">
-                                            <img src="images/posts/editor-sm-4.jpg" alt="post-title" />
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="details clearfix">
-                                    <h6 class="post-title my-0"><a href="#">15 Unheard Ways To Achieve Greater Walker</a></h6>
-                                    <ul class="meta list-inline mt-1 mb-0">
-                                        <li class="list-inline-item">29 March 2021</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="spacer" data-height="50"></div>
-
-                <!-- horizontal ads -->
-                <div class="ads-horizontal text-md-center">
-                    <span class="ads-title">- Sponsored Ad -</span>
-                    <a href="#">
-                        <img src="images/ads/ad-750.png" alt="Advertisement" />
-                    </a>
-                </div>
-
-                <div class="spacer" data-height="50"></div>
-
-                <!-- section header -->
-                <div class="section-header">
-                    <h3 class="section-title">Trending</h3>
-                    <img src="images/wave.svg" class="wave" alt="wave" />
-                </div>
-
-                <div class="padding-30 rounded bordered">
-                    <div class="row gy-5">
-                        <div class="col-sm-6">
-                            <!-- post large -->
-                            <div class="post">
-                                <div class="thumb rounded">
-                                    <a href="#" class="category-badge position-absolute">Culture</a>
-                                    <span class="post-format">
-                                        <i class="icon-picture"></i>
-                                    </span>
-                                    <a href="#">
-                                        <div class="inner">
-                                            <img src="images/posts/trending-lg-1.jpg" alt="post-title" />
-                                        </div>
-                                    </a>
-                                </div>
-                                <ul class="meta list-inline mt-4 mb-0">
-                                    <li class="list-inline-item"><a href="#"><img src="images/other/author-sm.png" class="author" alt="author" />Katen Doe</a></li>
-                                    <li class="list-inline-item">29 March 2021</li>
-                                </ul>
-                                <h5 class="post-title mb-3 mt-3"><a href="#">Facts About Business That Will Help You Success</a></h5>
-                                <p class="excerpt mb-0">A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy</p>
-                            </div>
-                            <!-- post -->
-                            <div class="post post-list-sm square before-seperator">
-                                <div class="thumb rounded">
-                                    <a href="#">
-                                        <div class="inner">
-                                            <img src="images/posts/trending-sm-1.jpg" alt="post-title" />
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="details clearfix">
-                                    <h6 class="post-title my-0"><a href="#">3 Easy Ways To Make Your iPhone Faster</a></h6>
-                                    <ul class="meta list-inline mt-1 mb-0">
-                                        <li class="list-inline-item">29 March 2021</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <!-- post -->
-                            <div class="post post-list-sm square before-seperator">
-                                <div class="thumb rounded">
-                                    <a href="#">
-                                        <div class="inner">
-                                            <img src="images/posts/trending-sm-2.jpg" alt="post-title" />
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="details clearfix">
-                                    <h6 class="post-title my-0"><a href="#">An Incredibly Easy Method That Works For All</a></h6>
-                                    <ul class="meta list-inline mt-1 mb-0">
-                                        <li class="list-inline-item">29 March 2021</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="spacer" data-height="50"></div>
-
-                <!-- section header -->
-                <!-- section header -->
-                <div class="section-header">
-                    <h3 class="section-title">Latest Posts</h3>
-                    <img src="images/wave.svg" class="wave" alt="wave" />
-                </div>
-
-                <div class="padding-30 rounded bordered">
-
-                    <div class="row">
-                        @if (Model.LatestPosts != null && Model.LatestPosts.Count > 0)
-                        {
-                            foreach (var item in Model.LatestPosts)
+                        <ul class="meta list-inline mb-0">
+                            <li class="list-inline-item"><a href="#">@Model.Featured.Author</a></li>
+                            @if (Model.Featured.CreateDate != null)
                             {
-                                <div class="col-md-12 col-sm-6">
-                                    <!-- post -->
-                                    <div class="post post-list clearfix">
-                                        <div class="thumb rounded">
-                                            <span class="post-format-sm">
-                                                <i class="icon-picture"></i>
-                                            </span>
-                                            <a href="#">
-                                                <div class="inner">
-                                                    <img src="images/posts/latest-sm-1.jpg" alt="post-title" />
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="details">
-                                            <ul class="meta list-inline mb-3">
-                                                <li class="list-inline-item"><a href="#"><img src="images/other/author-sm.png" class="author" alt="author" />Katen Doe</a></li>
-                                                <li class="list-inline-item"><a href="#">Trending</a></li>
-                                                <li class="list-inline-item">29 March 2021</li>
-                                            </ul>
-                                            <h5 class="post-title"><a href="#">The Next 60 Things To Immediately Do About Building</a></h5>
-                                            <p class="excerpt mb-0">A wonderful serenity has taken possession of my entire soul, like these sweet mornings</p>
-                                            <div class="post-bottom clearfix d-flex align-items-center">
-                                                <div class="social-share me-auto">
-                                                    <button class="toggle-button icon-share"></button>
-                                                    <ul class="icons list-unstyled list-inline mb-0">
-                                                        <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                                        <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                                        <li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                                                        <li class="list-inline-item"><a href="#"><i class="fab fa-pinterest"></i></a></li>
-                                                        <li class="list-inline-item"><a href="#"><i class="fab fa-telegram-plane"></i></a></li>
-                                                        <li class="list-inline-item"><a href="#"><i class="far fa-envelope"></i></a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="more-button float-end">
-                                                    <a href="#"><span class="icon-options"></span></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
+                                <li class="list-inline-item">@Model.Featured.CreateDate.Value.ToString("dd-MM-yyyy")</li>
                             }
-                        }
-
+                        </ul>
                     </div>
-                    <!-- load more button -->
-                    <div class="text-center">
-                        <button class="btn btn-simple">Load More</button>
+                   
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <!-- post -->
+                <div class="post post-list-sm square">
+                    <div class="thumb rounded">
+                        <a href="#">
+                            <div class="inner">
+                                <img src="images/posts/from-home-hiu-qu-hn-bao-gi-ht-cng-hp-probook-400-series-g8.jpg" alt="post-title" />
+                            </div>
+                        </a>
                     </div>
-
+                    <div class="details clearfix">
+                        <h6 class="post-title my-0"><a href="#">3 Easy Ways To Make Your iPhone Faster</a></h6>
+                        <ul class="meta list-inline mt-1 mb-0">
+                            <li class="list-inline-item">29 March 2021</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- post -->
+                <div class="post post-list-sm square">
+                    <div class="thumb rounded">
+                        <a href="#">
+                            <div class="inner">
+                                <img src="images/posts/editor-sm-2.jpg" alt="post-title" />
+                            </div>
+                        </a>
+                    </div>
+                    <div class="details clearfix">
+                        <h6 class="post-title my-0"><a href="#">An Incredibly Easy Method That Works For All</a></h6>
+                        <ul class="meta list-inline mt-1 mb-0">
+                            <li class="list-inline-item">29 March 2021</li>
+                        </ul>
+                    </div>
                 </div>
 
+                <!-- post -->
+                <div class="post post-list-sm square">
+                    <div class="thumb rounded">
+                        <a href="#">
+                            <div class="inner">
+                                <img src="images/posts/editor-sm-3.jpg" alt="post-title" />
+                            </div>
+                        </a>
+                    </div>
+                    <div class="details clearfix">
+                        <h6 class="post-title my-0"><a href="b#">10 Ways To Immediately Start Selling Furniture</a></h6>
+                        <ul class="meta list-inline mt-1 mb-0">
+                            <li class="list-inline-item">29 March 2021</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- post -->
+                <div class="post post-list-sm square">
+                    <div class="thumb rounded">
+                        <a href="#">
+                            <div class="inner">
+                                <img src="images/posts/editor-sm-4.jpg" alt="post-title" />
+                            </div>
+                        </a>
+                    </div>
+                    <div class="details clearfix">
+                        <h6 class="post-title my-0"><a href="#">15 Unheard Ways To Achieve Greater Walker</a></h6>
+                        <ul class="meta list-inline mt-1 mb-0">
+                            <li class="list-inline-item">29 March 2021</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
+        </div>
+    </div>
+
+    <div class="spacer" data-height="50"></div>
+
+    <!-- horizontal ads -->
+    <div class="ads-horizontal text-md-center">
+        <span class="ads-title">- Sponsored Ad -</span>
+        <a href="#">
+            <img src="images/ads/ad-750.png" alt="Advertisement" />
+        </a>
+    </div>
+
+    <div class="spacer" data-height="50"></div>
+
+    <!-- section header -->
+    
+    <div class="spacer" data-height="50"></div>
+
+    <!-- section header -->
+    <!-- section header -->
+  
+</div>
+            }
             <div class="col-lg-4">
 
                 <!-- sidebar -->
                 <div class="sidebar">
                     <!-- widget about -->
-                    <div class="widget rounded">
-                        <div class="widget-about data-bg-image text-center" data-bg-image="images/map-bg.png">
-                            <img src="images/logo.svg" alt="logo" class="mb-4" />
-                            <p class="mb-4">Hello, We’re content writer who is fascinated by content fashion, celebrity and lifestyle. We helps clients bring the right content to the right people.</p>
-                            <ul class="social-icons list-unstyled list-inline mb-0">
-                                <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li class="list-inline-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                <li class="list-inline-item"><a href="#"><i class="fab fa-pinterest"></i></a></li>
-                                <li class="list-inline-item"><a href="#"><i class="fab fa-medium"></i></a></li>
-                                <li class="list-inline-item"><a href="#"><i class="fab fa-youtube"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
+               
 
                     <!-- widget popular posts -->
 
                     @await Component.InvokeAsync("Popular")
 
-
-
-                    <!-- widget categories -->
-                    <div class="widget rounded">
-                        <div class="widget-header text-center">
-                            <h3 class="widget-title">Explore Topics</h3>
-                            <img src="images/wave.svg" class="wave" alt="wave" />
-                        </div>
-                        @await Component.InvokeAsync("Categories")
-                    </div>
-
-
-                    <!-- widget advertisement -->
-                    <div class="widget no-container rounded text-md-center">
-                        <span class="ads-title">- Sponsored Ad -</span>
-                        <a href="#" class="widget-ads">
-                            <img src="images/ads/ad-360.png" alt="Advertisement" />
-                        </a>
-                    </div>
-
-                    <!-- widget tags -->
-                    <div class="widget rounded">
-                        <div class="widget-header text-center">
-                            <h3 class="widget-title">Tag Clouds</h3>
-                            <img src="images/wave.svg" class="wave" alt="wave" />
-                        </div>
-                        <div class="widget-content">
-                            <a href="#" class="tag">#Trending</a>
-                            <a href="#" class="tag">#Video</a>
-                            <a href="#" class="tag">#Featured</a>
-                            <a href="#" class="tag">#Gallery</a>
-                            <a href="#" class="tag">#Celebrities</a>
-                        </div>
-                    </div>
                 </div>
 
             </div>

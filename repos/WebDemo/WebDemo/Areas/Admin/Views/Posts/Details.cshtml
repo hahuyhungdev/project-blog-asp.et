@@ -86,7 +86,8 @@
             @Html.DisplayFor(model => model.Xem)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Contents)
+
+           
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.Contents)
@@ -106,6 +107,8 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model.PostId">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <div style="text-align:center !important" class="form-layout-footer mg-t-30">
+        <a asp-area="Admin" asp-controller="Categories" asp-action="Index" class="btn btn-success bd-0">Xem lại danh sách</a>
+    </div>
 </div>
+

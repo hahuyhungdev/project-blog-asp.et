@@ -1,73 +1,62 @@
 ﻿@model WebDemo.Models.Account
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "THÔNG TIN QUYỀN QUẢN TRỊ";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
 
 <h1>Details</h1>
 
-<div>
-    <h4>Account</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.FullName)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.FullName)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Email)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Email)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Phone)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Phone)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Password)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Password)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Salt)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Salt)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Active)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Active)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.CreateDate)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.CreateDate)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.LastLogin)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.LastLogin)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Role)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Role.RoleId)
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model.AccountId">Edit</a> |
-    <a asp-action="Index">Back to List</a>
-</div>
+
+<h4>Account</h4>
+<div class="slim-pageheader">
+    <ol class="breadcrumb slim-breadcrumb">
+        <li class="breadcrumb-item"><a asp-area="Admin" asp-controller="Home" asp-action="Index">HOME</a></li>
+        <li class="breadcrumb-item"><a asp-area="Admin" asp-controller="Accounts" asp-action="Index">DANH SÁCH QUYỀN QUẢN TRỊ</a></li>
+        <li class="breadcrumb-item active" aria-current="page">THÔNG TIN QUYỀN QUẢN TRỊ</li>
+    </ol>
+    <h6 class="slim-pagetitle">THÔNG TIN QUYỀN TRUY CẬP</h6>
+</div><!-- slim-pageheader -->
+<div class="section-wrapper mg-t-20">
+    <label class="section-title">XTHÔNG TIN QUYỀN TRUY CẬP</label>
+
+    <div class="form-layout form-layout-7">
+        <div class="row no-gutters">
+            <div class="col-5 col-sm-4">
+                Tên:
+            </div><!-- col-4 -->
+            <div class="col-7 col-sm-8">
+                <input disabled disabled asp-for="FullName" class="form-control" type="text">
+            </div><!-- col-8 -->
+        </div><!-- row -->
+        <div class="row no-gutters">
+            <div class="col-5 col-sm-4">
+               Email:
+            </div><!-- col-4 -->
+            <div class="col-7 col-sm-8">
+                <input disabled asp-for="Email" class="form-control" type="text">
+            </div><!-- col-8 -->
+        </div><!-- row -->
+        <div class="row no-gutters">
+            <div class="col-5 col-sm-4">
+                Ngày tạo:
+            </div><!-- col-4 -->
+            <div class="col-7 col-sm-8">
+                <input disabled asp-for="CreateDate" class="form-control" type="text">
+            </div><!-- col-8 -->
+        </div><!-- row -->
+        <div class="row no-gutters">
+            <div class="col-5 col-sm-4">
+                Mật khẩu:
+            </div><!-- col-4 -->
+            <div class="col-7 col-sm-8">
+                <input disabled asp-for="Password" class="form-control" type="text">
+            </div><!-- col-8 -->
+        </div><!-- row -->
+    </div><!-- form-layout -->
+    <div style="text-align:center !important" class="form-layout-footer mg-t-30">
+        <a asp-area="Admin" asp-controller="Categories" asp-action="Index" class="btn btn-success bd-0">Xem lại danh sách</a>
+    </div>
+</div><!-- section-wrapper -->
+
+

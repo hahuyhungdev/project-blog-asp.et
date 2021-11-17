@@ -92,7 +92,7 @@ namespace WebDemo.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("PostId,Title,Scontent,Content,Thumb,Published,Alias,CreateData,Author,AccountId,Tags,CatId,IsHot,IsNewfeed,MetaKey,MetaDesc,Xem")] Post post, Microsoft.AspNetCore.Http.IFormFile fThumb)
+        public async Task<IActionResult> Create([Bind("PostId,Title,Scontent,Contents,Thumb,Published,Alias,CreateData,Author,AccountId,Tags,CatId,IsHot,IsNewfeed,MetaKey,MetaDesc,Xem")] Post post, Microsoft.AspNetCore.Http.IFormFile fThumb)
         {
             if (!User.Identity.IsAuthenticated) Response.Redirect("/dang-nhap.html");
             var taikhoanID = HttpContext.Session.GetString("AccountId");
@@ -146,7 +146,7 @@ namespace WebDemo.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("PostId,Title,Scontent,Content,Thumb,Published,Alias,CreateData,Author,AccountId,Tags,CatId,IsHot,IsNewfeed,MetaKey,MetaDesc,Xem")] Post post, Microsoft.AspNetCore.Http.IFormFile fThumb)
+        public async Task<IActionResult> Edit(int id, [Bind("PostId,Title,Scontent,Contents,Thumb,Published,Alias,CreateData,Author,AccountId,Tags,CatId,IsHot,IsNewfeed,MetaKey,MetaDesc,Xem")] Post post, Microsoft.AspNetCore.Http.IFormFile fThumb)
         {
             if (id != post.PostId)
             {
