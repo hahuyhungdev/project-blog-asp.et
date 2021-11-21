@@ -5,110 +5,77 @@
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<h1>Details</h1>
+@section Styles {
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+    <link href="~/AdminAssets/lib/select2/css/select2.min.css" rel="stylesheet">
+}
+<div class="slim-pageheader">
+    <ol class="breadcrumb slim-breadcrumb">
+        <li class="breadcrumb-item"><a asp-area="Admin" asp-controller="Home" asp-action="Index">HOME</a></li>
+        <li class="breadcrumb-item"><a asp-area="Admin" asp-controller="Posts" asp-action="Index">DANH SÁCH TIN ĐĂNG</a></li>
+        <li class="breadcrumb-item active" aria-current="page">THÔNG TIN  TIN ĐĂNG</li>
+    </ol>
+    <h6 class="slim-pagetitle">THÔNG TIN TIN ĐĂNG</h6>
+</div><!-- slim-pageheader -->
 
-<div>
-    <h4>Post</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Title)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Title)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Scontent)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Scontent)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Thumb)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Thumb)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Published)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Published)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Alias)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Alias)
-        </dd>
-        
-       
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Author)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Author)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Tags)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Tags)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.IsHot)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.IsHot)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.IsNewfeed)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.IsNewfeed)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.MetaKey)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.MetaKey)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.MetaDesc)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.MetaDesc)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Xem)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Xem)
-        </dd>
-        <dt class = "col-sm-2">
+<div class="section-wrapper">
+    <div class="form-layout">
+        <div class="form-layout form-layout-7">
 
-           
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Contents)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Account)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Account.AccountId)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Cat)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Cat.CatId)
-        </dd>
-    </dl>
+            <div class="row no-gutters">
+                <div class="col-5 col-sm-4">
+                    Tiêu đề :
+                </div><!-- col-4 -->
+                <div class="col-7 col-sm-8">
+                    <input disabled disabled asp-for="Title" class="form-control" type="text">
+                </div><!-- col-8 -->
+            </div><!-- row -->
+            <div class="row no-gutters">
+                <div class="col-5 col-sm-4">
+                    Tác giả:
+                </div><!-- col-4 -->
+                <div class="col-7 col-sm-8">
+                    <input disabled asp-for="Author" class="form-control" type="text">
+                </div><!-- col-8 -->
+            </div><!-- row -->
+            <div class="row no-gutters">
+                <div class="col-5 col-sm-4">
+                    ngày tạo
+                </div><!-- col-4 -->
+                <div class="col-7 col-sm-8">
+                    <input disabled asp-for="CreateDate" class="form-control" type="text">
+                </div><!-- col-8 -->
+
+            </div><!-- form-layout -->
+            <br>
+            <div class="col-lg-12">
+                <div class="form-group mg-b-10-force">
+                    <label class="form-control-label">MO TA <span class="tx-danger">*</span></label>
+                    <textarea asp-for="Contents"></textarea>
+                </div>
+            </div>
+            <div style="text-align:center !important" class="form-layout-footer mg-t-30">
+                <a asp-area="Admin" asp-controller="Posts" asp-action="Index" class="btn btn-success bd-0">Xem lại danh sách</a>
+            </div>
+
+        </div><!-- form-layout -->
 </div>
-<div>
-    <div style="text-align:center !important" class="form-layout-footer mg-t-30">
-        <a asp-area="Admin" asp-controller="Categories" asp-action="Index" class="btn btn-success bd-0">Xem lại danh sách</a>
-    </div>
-</div>
-
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+    <script src="~/AdminAssets/lib/select2/css/select2.min.js"></script>
+    <script>
+        jQuery(document).ready(function () {
+            $('#Contents').summernote({
+                fontNames: ['Arial', 'Arial Black', 'Comic Sans MS', 'Courier New'],
+                styleTag: ['p', 'h1', 'h2', 'h3', 'h4', 'h5'],
+                height: 200,
+                minHeight: null,
+                maxHeight: null,
+                focus: true
+            });
+        });
+    </script>
+}
