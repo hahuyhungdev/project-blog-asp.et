@@ -543,6 +543,7 @@ blockquote p {
 /*                      HEADER                              
 /*=================================================================*/
 .header-default {
+  margin-top: -22px;
   padding: 40px 0;
   position: relative;
   width: 100%;
@@ -1020,7 +1021,8 @@ section {
 }
 
 .main-content {
-  margin-top: 60px;
+  background-color: wheat;
+  margin-top: 20px;
 }
 
 .main-content-lg {
@@ -2141,7 +2143,7 @@ section {
 /*                      FOOTER                              
 /*=================================================================*/
 footer {
-  margin-top: 50px;
+  margin-top: 10px;
 }
 footer .footer-inner {
   border-top: solid 1px #EBEBEB;

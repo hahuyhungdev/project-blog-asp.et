@@ -144,7 +144,9 @@
 *::before,
 *::after {
   box-sizing: border-box; }
-
+#hero{
+    background-color: wheat;
+}
 html {
   font-family: sans-serif;
   line-height: 1.15;
@@ -167,7 +169,7 @@ body {
   line-height: 1.5;
   color: #868ba1;
   text-align: left;
-  background-color: #f0f2f7; }
+  background-color: wheat; }
 
 [tabindex="-1"]:focus {
   outline: 0 !important; }
@@ -12908,7 +12910,7 @@ textarea.parsley-success:focus {
   padding: 15px 0; }
   @media (min-width: 992px) {
     .slim-footer {
-      margin-top: 50px;
+      margin-top: 20px;
       padding: 0; } }
   .slim-footer .container,
   .slim-footer .container-fluid {

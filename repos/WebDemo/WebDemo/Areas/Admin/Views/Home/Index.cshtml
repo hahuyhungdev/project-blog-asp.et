@@ -3,341 +3,129 @@
     ViewData["Title"] = "Admin";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
+@section Styless {
+    <link rel="stylesheet" href="~/AdminAssets/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://cdn.linearicons.com/free/1.0.0/svgembedder.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+}
+<body>
+    <!-- partial:index.partial.html -->
+    <body data-spy="scroll" data-target="#scroll-spy">
 
-<div class="slim-pageheader">
-    <ol class="breadcrumb slim-breadcrumb">
-        <li class="breadcrumb-item"><a href="#">Home</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
-    </ol>
-    <h6 class="slim-pagetitle">Dashboard 01</h6>
-</div><!-- slim-pageheader -->
+        <!-- Navigation - Fixed Top -->
+   
+       
 
-<div class="dash-headline">
-    <div class="dash-headline-left">
-        <div class="dash-headline-item-one">
-            <div id="chartArea1" class="dash-chartist"></div>
-            <div class="dash-item-overlay">
-                <h1>0.0345 <span class="tx-24">BTC</span></h1>
-                <p class="earning-label">Bitcoin Earnings</p>
-                <p class="earning-desc">Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus...</p>
-                <a href="#" class="statement-link">View Statements <i class="fa fa-angle-right mg-l-5"></i></a>
-            </div>
-        </div><!-- dash-headline-item-one -->
-    </div><!-- dash-headline-left -->
+     
+       
+        <section id="features">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="section-header">
+                            Những tính năng nổi bật của website tin tức
+                        </div>
+                    </div><!-- /.col -->
+                </div><!-- /.row -->
 
-    <div class="dash-headline-right">
-        <div class="dash-headline-right-top">
-            <div class="dash-headline-item-two">
-                <div id="chartMultiBar1" class="chart-rickshaw"></div>
-                <div class="dash-item-overlay">
-                    <h4>0.0873 <span class="tx-20">ETH</span></h4>
-                    <p class="item-label">Ethereum Wallet</p>
-                    <p class="item-desc">Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus...</p>
-                    <a href="#" class="report-link">View Report <i class="fa fa-angle-right mg-l-5"></i></a>
-                </div>
-            </div><!-- dash-headline-item-two -->
-        </div><!-- dash-headline-right-top -->
-        <div class="dash-headline-right-bottom">
-            <div class="dash-headline-right-bottom-left">
-                <div class="dash-headline-item-three">
-                    <span id="sparkline3" class="sparkline wd-100p">1,4,4,7,5,9,10,5,4,4,7,5,9,10</span>
-                    <div>
-                        <h1>29,931</h1>
-                        <p class="item-label">Male Visitors</p>
-                        <p class="item-desc">Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus...</p>
-                    </div>
-                </div><!-- dash-headline-item-three -->
-            </div><!-- dash-headline-right-bottom-left -->
-            <div class="dash-headline-right-bottom-right">
-                <div class="dash-headline-item-three">
-                    <span id="sparkline4" class="sparkline wd-100p">1,4,4,7,5,7,4,3,4,4,6,5,9,7</span>
-                    <div>
-                        <h1>45,231</h1>
-                        <p class="item-label">Female Visitors</p>
-                        <p class="item-desc">Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus...</p>
-                    </div>
-                </div><!-- dash-headline-item-three -->
-            </div><!-- dash-headline-right-bottom-right -->
-        </div><!-- dash-headline-right-bottom -->
-    </div><!-- wd-50p -->
-</div><!-- d-flex ht-100v -->
+                <div class="row">
+                    <div class="feature-container col-xs-12">
+                        <div class="row">
+                            <div class="feature col-xs-8 col-xs-offset-2 col-sm-4 col-sm-offset-0 text-center">
+                                <svg class="lnr lnr-magic-wand"><use xlink:href="#lnr-magic-wand"></use></svg>
+                                <h4>GIAO DIỆN TRỰC QUAN ,RÕ RÀNG</h4>
+                                <p>Khi tới website tin tức của chúng tôi sẽ mang cho các bạn trải nghiệm tối ưu nhất</p>
+                            </div><!-- /.feature -->
 
-<div class="card card-dash-one mg-t-20">
-    <div class="row no-gutters">
-        <div class="col-lg-3">
-            <i class="icon ion-ios-analytics-outline"></i>
-            <div class="dash-content">
-                <label class="tx-primary">Impressions</label>
-                <h2>822,490</h2>
-            </div><!-- dash-content -->
-        </div><!-- col-3 -->
-        <div class="col-lg-3">
-            <i class="icon ion-ios-pie-outline"></i>
-            <div class="dash-content">
-                <label class="tx-success">Page Visits</label>
-                <h2>465,183</h2>
-            </div><!-- dash-content -->
-        </div><!-- col-3 -->
-        <div class="col-lg-3">
-            <i class="icon ion-ios-stopwatch-outline"></i>
-            <div class="dash-content">
-                <label class="tx-purple">Commision</label>
-                <h2>781,524</h2>
-            </div><!-- dash-content -->
-        </div><!-- col-3 -->
-        <div class="col-lg-3">
-            <i class="icon ion-ios-world-outline"></i>
-            <div class="dash-content">
-                <label class="tx-danger">Earnings</label>
-                <h2>369,657</h2>
-            </div><!-- dash-content -->
-        </div><!-- col-3 -->
-    </div><!-- row -->
-</div><!-- card -->
+                            <div class="feature col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-0 text-center">
+                                <svg class="lnr lnr-map-marker"><use xlink:href="#lnr-map-marker"></use></svg>
+                                <h4>Lan truyền khắp mọi nơi</h4>
+                                <p> Ở bất cứ đâu, chỉ cần bạn có internet đều có thể kết nối với chúng tôi</p>
+                            </div><!-- /.feature -->
 
-<div class="row row-sm mg-t-20">
-    <div class="col-lg-6">
-        <div class="card card-table">
-            <div class="card-header">
-                <h6 class="slim-card-title">Product Purchases</h6>
-            </div><!-- card-header -->
-            <div class="table-responsive">
-                <table class="table mg-b-0 tx-13">
-                    <thead>
-                        <tr class="tx-10">
-                            <th class="wd-10p pd-y-5">&nbsp;</th>
-                            <th class="pd-y-5">Item Details</th>
-                            <th class="pd-y-5 tx-right">Sold</th>
-                            <th class="pd-y-5">Gain</th>
-                            <th class="pd-y-5 tx-center">Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="pd-l-20">
-                                <img src="http://via.placeholder.com/800x533" class="wd-55" alt="Image">
-                            </td>
-                            <td>
-                                <a href="" class="tx-inverse tx-14 tx-medium d-block">The Dothraki Shoes</a>
-                                <span class="tx-11 d-block"><span class="square-8 bg-danger mg-r-5 rounded-circle"></span> 20 remaining</span>
-                            </td>
-                            <td class="valign-middle tx-right">3,345</td>
-                            <td class="valign-middle"><span class="tx-success"><i class="icon ion-android-arrow-up mg-r-5"></i>33.34%</span> from last week</td>
-                            <td class="valign-middle tx-center">
-                                <a href="" class="tx-gray-600 tx-24"><i class="icon ion-android-more-horizontal"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="pd-l-20">
-                                <img src="http://via.placeholder.com/800x533" class="wd-55" alt="Image">
-                            </td>
-                            <td>
-                                <a href="" class="tx-inverse tx-14 tx-medium d-block">Westeros Sneaker</a>
-                                <span class="tx-11 d-block"><span class="square-8 bg-success mg-r-5 rounded-circle"></span> In stock</span>
-                            </td>
-                            <td class="valign-middle tx-right">720</td>
-                            <td class="valign-middle"><span class="tx-danger"><i class="icon ion-android-arrow-down mg-r-5"></i>21.20%</span> from last week</td>
-                            <td class="valign-middle tx-center">
-                                <a href="" class="tx-gray-600 tx-24"><i class="icon ion-android-more-horizontal"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="pd-l-20">
-                                <img src="http://via.placeholder.com/800x533" class="wd-55" alt="Image">
-                            </td>
-                            <td>
-                                <a href="" class="tx-inverse tx-14 tx-medium d-block">Selonian Hand Bag</a>
-                                <span class="tx-11 d-block"><span class="square-8 bg-success mg-r-5 rounded-circle"></span> In stock</span>
-                            </td>
-                            <td class="valign-middle tx-right">1,445</td>
-                            <td class="valign-middle"><span class="tx-success"><i class="icon ion-android-arrow-up mg-r-5"></i>23.34%</span> from last week</td>
-                            <td class="valign-middle tx-center">
-                                <a href="" class="tx-gray-600 tx-24"><i class="icon ion-android-more-horizontal"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="pd-l-20">
-                                <img src="http://via.placeholder.com/800x533" class="wd-55" alt="Image">
-                            </td>
-                            <td>
-                                <a href="" class="tx-inverse tx-14 tx-medium d-block">Kel Dor Sunglass</a>
-                                <span class="tx-11 d-block"><span class="square-8 bg-warning mg-r-5 rounded-circle"></span> 45 remaining</span>
-                            </td>
-                            <td class="valign-middle tx-right">2,500</td>
-                            <td class="valign-middle"><span class="tx-success"><i class="icon ion-android-arrow-up mg-r-5"></i>28.78%</span> from last week</td>
-                            <td class="valign-middle tx-center">
-                                <a href="" class="tx-gray-600 tx-24"><i class="icon ion-android-more-horizontal"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="pd-l-20">
-                                <img src="http://via.placeholder.com/800x533" class="wd-55" alt="Image">
-                            </td>
-                            <td>
-                                <a href="" class="tx-inverse tx-14 tx-medium d-block">Kubaz Sunglass</a>
-                                <span class="tx-11 d-block"><span class="square-8 bg-success mg-r-5 rounded-circle"></span> In stock</span>
-                            </td>
-                            <td class="valign-middle tx-14 tx-right">223</td>
-                            <td class="valign-middle"><span class="tx-danger"><i class="icon ion-android-arrow-down mg-r-5"></i>18.18%</span> from last week</td>
-                            <td class="valign-middle tx-center">
-                                <a href="" class="tx-gray-600 tx-24"><i class="icon ion-android-more-horizontal"></i></a>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div><!-- table-responsive -->
-            <div class="card-footer tx-12 pd-y-15 bg-transparent">
-                <a href=""><i class="fa fa-angle-down mg-r-5"></i>View All Products</a>
-            </div><!-- card-footer -->
-        </div><!-- card -->
-    </div><!-- col-6 -->
-    <div class="col-lg-6 mg-t-20 mg-lg-t-0">
-        <div class="card card-table">
-            <div class="card-header">
-                <h6 class="slim-card-title">User Transaction History</h6>
-            </div><!-- card-header -->
-            <div class="table-responsive">
-                <table class="table mg-b-0 tx-13">
-                    <thead>
-                        <tr class="tx-10">
-                            <th class="wd-10p pd-y-5">&nbsp;</th>
-                            <th class="pd-y-5">User</th>
-                            <th class="pd-y-5">Type</th>
-                            <th class="pd-y-5">Date</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="pd-l-20">
-                                <img src="http://via.placeholder.com/500x500" class="wd-36 rounded-circle" alt="Image">
-                            </td>
-                            <td>
-                                <a href="" class="tx-inverse tx-14 tx-medium d-block">Mark K. Peters</a>
-                                <span class="tx-11 d-block">TRANSID: 1234567890</span>
-                            </td>
-                            <td class="tx-12">
-                                <span class="square-8 bg-success mg-r-5 rounded-circle"></span> Email verified
-                            </td>
-                            <td>Just Now</td>
-                        </tr>
-                        <tr>
-                            <td class="pd-l-20">
-                                <img src="http://via.placeholder.com/500x500" class="wd-36 rounded-circle" alt="Image">
-                            </td>
-                            <td>
-                                <a href="" class="tx-inverse tx-14 tx-medium d-block">Karmen F. Brown</a>
-                                <span class="tx-11 d-block">TRANSID: 1234567890</span>
-                            </td>
-                            <td class="tx-12">
-                                <span class="square-8 bg-warning mg-r-5 rounded-circle"></span> Pending verification
-                            </td>
-                            <td>Apr 21, 2017 8:34am</td>
-                        </tr>
-                        <tr>
-                            <td class="pd-l-20">
-                                <img src="http://via.placeholder.com/500x500" class="wd-36 rounded-circle" alt="Image">
-                            </td>
-                            <td>
-                                <a href="" class="tx-inverse tx-14 tx-medium d-block">Gorgonio Magalpok</a>
-                                <span class="tx-11 d-block">TRANSID: 1234567890</span>
-                            </td>
-                            <td class="tx-12">
-                                <span class="square-8 bg-success mg-r-5 rounded-circle"></span> Purchased success
-                            </td>
-                            <td>Apr 10, 2017 4:40pm</td>
-                        </tr>
-                        <tr>
-                            <td class="pd-l-20">
-                                <img src="http://via.placeholder.com/500x500" class="wd-36 rounded-circle" alt="Image">
-                            </td>
-                            <td>
-                                <a href="" class="tx-inverse tx-14 tx-medium d-block">Ariel T. Hall</a>
-                                <span class="tx-11 d-block">TRANSID: 1234567890</span>
-                            </td>
-                            <td class="tx-12">
-                                <span class="square-8 bg-warning mg-r-5 rounded-circle"></span> Payment on hold
-                            </td>
-                            <td>Apr 02, 2017 6:45pm</td>
-                        </tr>
-                        <tr>
-                            <td class="pd-l-20">
-                                <img src="http://via.placeholder.com/500x500" class="wd-36 rounded-circle" alt="Image">
-                            </td>
-                            <td>
-                                <a href="" class="tx-inverse tx-14 tx-medium d-block">John L. Goulette</a>
-                                <span class="tx-11 d-block">TRANSID: 1234567890</span>
-                            </td>
-                            <td class="tx-12">
-                                <span class="square-8 bg-pink mg-r-5 rounded-circle"></span> Account deactivated
-                            </td>
-                            <td>Mar 30, 2017 10:30am</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div><!-- table-responsive -->
-            <div class="card-footer tx-12 pd-y-15 bg-transparent">
-                <a href=""><i class="fa fa-angle-down mg-r-5"></i>View All Transaction History</a>
-            </div><!-- card-footer -->
-        </div><!-- card -->
-    </div><!-- col-6 -->
-</div><!-- row -->
+                            <div class="feature col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-0 text-center">
+                                <svg class="lnr lnr-bullhorn"><use xlink:href="#lnr-bullhorn"></use></svg>
+                                <h4>Cập nhật tin tức nhanh nhất</h4>
+                                <p>Chúng tôi sử dụng các công nghệ để có thể lấy được những thông tin nhanh và chính xác nhất</p>
+                            </div><!-- /.feature -->
+                        </div><!-- /.row -->
+                    </div><!-- /.feature-container -->
 
-<div class="row row-sm mg-t-20">
-    <div class="col-lg-4">
-        <div class="card card-info">
-            <div class="card-body pd-40">
-                <div class="d-flex justify-content-center mg-b-30">
-                    <img src="../img/icon1.svg" class="wd-100" alt="">
-                </div>
-                <h5 class="tx-inverse mg-b-20">Safe &amp; Secure</h5>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia. Even the all-powerful Pointing has no control about the blind texts.</p>
-                <a href="" class="btn btn-primary btn-block">Getting Started</a>
-            </div><!-- card -->
-        </div><!-- card -->
-    </div><!-- col-4 -->
-    <div class="col-lg-4 mg-t-20 mg-lg-t-0">
-        <div class="card card-info">
-            <div class="card-body pd-40">
-                <div class="d-flex justify-content-center mg-b-30">
-                    <img src="../img/icon2.svg" class="wd-100" alt="">
-                </div>
-                <h5 class="tx-inverse mg-b-20">Instant Exchange</h5>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia. Even the all-powerful Pointing has no control about the blind texts.</p>
-                <a href="" class="btn btn-primary btn-block">Take a Tour</a>
-            </div><!-- card-body -->
-        </div><!-- card -->
-    </div><!-- col-4 -->
-    <div class="col-lg-4 mg-t-20 mg-lg-t-0">
-        <div class="card card-sales">
-            <h6 class="slim-card-title tx-primary">Sales Report</h6>
-            <div class="row">
-                <div class="col">
-                    <label class="tx-12">Today</label>
-                    <p>1,898</p>
-                </div><!-- col -->
-                <div class="col">
-                    <label class="tx-12">This Week</label>
-                    <p>32,112</p>
-                </div><!-- col -->
-                <div class="col">
-                    <label class="tx-12">This Month</label>
-                    <p>72,067</p>
-                </div><!-- col -->
-            </div><!-- row -->
+                </div><!-- /.row -->
+            </div><!-- /.container -->
 
-            <div class="progress mg-b-5">
-                <div class="progress-bar bg-primary wd-50p" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
-            </div>
-            <p class="tx-12 mg-b-0">Maecenas tempus, tellus eget conditum rhon.</p>
-        </div><!-- card -->
+            <div class="container-fluid">
+                <div class="banner row">
+                    <div class="banner-child bc-left col-sm-6">
+                        <div class="section-sub-header">
+                            Animated Scroll
+                        </div>
 
-        <div class="card card-impression mg-t-20">
-            <div class="card-body pd-b-0">
-                <h6 class="slim-card-title tx-primary">Page Impressions</h6>
-                <h2 class="tx-lato tx-inverse">323,360</h2>
-                <p class="tx-12"><span class="tx-primary">2.5%</span> change from yesterday</p>
-            </div><!-- card-body -->
-            <div id="rs3" class="ht-50 ht-sm-70 mg-r--1"></div>
-        </div><!-- card -->
-    </div><!-- col-4 -->
-</div><!-- row -->
+                        <div class="animated-scroll">
+                            <div class="scroll-header">
+                                <div class="scroll-nav sn-1"></div>
+                                <div class="scroll-nav sn-2"></div>
+                                <div class="scroll-nav sn-3"></div>
+                                <svg class="cursor" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 24 24" id="Layer_1" version="1.0" viewBox="0 0 24 24" xml:space="preserve"><path d="M7,2l12,11.2l-5.8,0.5l3.3,7.3l-2.2,1l-3.2-7.4L7,18.5V2" /></svg>
+                            </div><!-- /.scroll-header -->
+
+                            <div class="scroll-body">
+                                <div class="scroll-child sc-1"></div>
+                                <div class="scroll-child sc-2"></div>
+                                <div class="scroll-child sc-3"></div>
+                                <div class="scroll-child sc-back-to-top"></div>
+                            </div><!-- /.scroll-body -->
+                        </div><!-- /.animated scroll -->
+                    </div><!-- /.banner-child -->
+
+                    <div class="banner-child bc-right col-sm-6">
+                        <div class="section-sub-header">
+                            Focus Events | UX
+                        </div>
+
+                        <div class="focus-events">
+                            <div class="scroll-header">
+                                <div class="scroll-nav sn-1"></div>
+                                <div class="scroll-nav sn-2"></div>
+                                <svg class="cursor" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 24 24" id="Layer_1" version="1.0" viewBox="0 0 24 24" xml:space="preserve"><path d="M7,2l12,11.2l-5.8,0.5l3.3,7.3l-2.2,1l-3.2-7.4L7,18.5V2" /></svg>
+                            </div><!-- /.scroll-header -->
+
+                            <div class="scroll-body">
+                                <div class="scroll-child sc-1">
+                                    <div class="header"></div>
+                                    <div class="sub-header"></div>
+                                    <div class="body"></div>
+                                    <div class="body"></div>
+                                    <div class="body"></div>
+                                </div>
+                                <div class="scroll-child sc-2">
+                                    <div class="header"></div>
+                                    <div class="sub-header"></div>
+                                    <div class="body"></div>
+                                    <div class="body"></div>
+                                    <div class="body"></div>
+                                </div>
+                            </div><!-- /.scroll-body -->
+                        </div><!-- /.animated scroll -->
+                    </div><!-- /.banner-child -->
+                </div><!-- /.row -->
+            </div><!-- /.container-fluid -->
+        </section><!-- /#features -->
+
+        
+    </body>
+    <!-- partial -->
+    <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
+
+
+</body>
+@section Scriptss {
+    <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
+    <script src="~/AdminAssets/css/script.js"></script>
+
+}

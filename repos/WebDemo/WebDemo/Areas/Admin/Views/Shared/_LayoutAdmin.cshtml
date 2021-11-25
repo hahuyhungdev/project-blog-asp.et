@@ -37,6 +37,7 @@
     <link rel="stylesheet" href="~/css/slim.css">
     <link href="~/AdminAssets/css/slim.css" rel="stylesheet" />
     @await RenderSectionAsync("Styles", required: false)
+    @await RenderSectionAsync("Styless", required: false)
 </head>
 <body>
     <div class="slim-header">
@@ -62,7 +63,7 @@
                                 <a href="thong-tin-tai-khoan.html" class="nav-link"><i class="icon ion-person"></i> View Profile</a>
                                 <a href="edit-profile.html" class="nav-link"><i class="icon ion-compose"></i> Edit Profile</a>
                                 <a href="doi-mat-khau.html" class="nav-link"><i class="icon ion-ios-gear"></i> Thay đổi mật khẩu</a>
-                                <a href="dang-xuat.html" class="nav-link"><i class="icon ion-forward"></i> Sign Out</a>
+                                <a href="/dang-xuat.html" class="nav-link"><i class="icon ion-forward"></i> Sign Out</a>
 
                             </nav>
                         </div><!-- dropdown-menu -->
@@ -148,5 +149,6 @@
     <script src="~/js/dashboard.js"></script>
     <script src="~/js/slim.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
+    @await RenderSectionAsync("Scriptss", required: false)
 </body>
 </html>
