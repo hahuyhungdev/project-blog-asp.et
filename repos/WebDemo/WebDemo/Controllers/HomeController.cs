@@ -41,6 +41,11 @@ namespace WebDemo.Controllers
         {
             return View();
         }
+        [Route("not-found.html", Name = "NotFound")]
+        public IActionResult NotFound()
+        {
+            return View();
+        }
 
         public IActionResult Privacy()
         {

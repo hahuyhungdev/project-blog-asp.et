@@ -6,7 +6,7 @@
 }
 <div class="slim-pageheader">
     <ol class="breadcrumb slim-breadcrumb">
-        <li class="breadcrumb-item"><a asp-area="Admin" asp-controller="Home" asp-action="Index">HOME</a></li>
+        <li class="breadcrumb-item"><a asp-area="Admin" asp-controller="Home" asp-action="Index">TRANG CHỦ</a></li>
         <li class="breadcrumb-item"><a asp-area="Admin" asp-controller="Categories" asp-action="Index">QUẢN LÍ QUYỀN TRUY CẬP</a></li>
         <li class="breadcrumb-item"><a asp-area="Admin" asp-controller="Categories" asp-action="Create">TẠO MỚI DANH MỤC</a></li>
     </ol>
@@ -47,9 +47,9 @@
 
                             </td>
                             <td>
-                                <a asp-area="Admin" asp-controller="Categories" asp-action="Details" asp-route-id="@item.CatId" class="btn btn-success">View</a>
-                                <a asp-area="Admin" asp-controller="Categories" asp-action="Edit" asp-route-id="@item.CatId" class="btn btn-primary">Edit</a>
-                                <a asp-area="Admin" asp-controller="Categories" asp-action="Delete" asp-route-id="@item.CatId" class="btn btn-danger">Delete</a>
+                                <a asp-area="Admin" asp-controller="Categories" asp-action="Details" asp-route-id="@item.CatId" class="btn btn-success">Xem</a>
+                                <a asp-area="Admin" asp-controller="Categories" asp-action="Edit" asp-route-id="@item.CatId" class="btn btn-primary">Chỉnh sửa</a>
+                                <a asp-area="Admin" asp-controller="Categories" asp-action="Delete" asp-route-id="@item.CatId" class="btn btn-danger">Xóa</a>
                             </td>
                         </tr>
                     }

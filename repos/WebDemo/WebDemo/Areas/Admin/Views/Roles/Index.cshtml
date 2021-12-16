@@ -6,7 +6,7 @@
 }
 <div class="slim-pageheader">
     <ol class="breadcrumb slim-breadcrumb">
-        <li class="breadcrumb-item"><a asp-area="Admin" asp-controller="Home" asp-action="Index">HOME</a></li>
+        <li class="breadcrumb-item"><a asp-area="Admin" asp-controller="Home" asp-action="Index">TRANG CHỦ</a></li>
         <li class="breadcrumb-item"><a asp-area="Admin" asp-controller="Roles" asp-action="Index">QUẢN LÍ QUYỀN TRUY CẬP</a></li>
         <li class="breadcrumb-item active" asp-area="Admin" asp-controller="Roles" asp-action="Create" aria-current="page">TẠO MỚI QUYỀN TRUY CẬP</li>
 
@@ -20,8 +20,8 @@
             <thead>
                 <tr>
                     <th>ID</th>
-                    <th>Name</th>
-                    <th>Description</th>
+                    <th>Tên</th>
+                    <th>Miêu tả ngắn</th>
                     <th>#</th>
                 </tr>
             </thead>
@@ -35,9 +35,9 @@
                             <td>@item.RoleName</td>
                             <td>@item.RoleDescription</td>
                             <td>
-                                <a asp-area="Admin" asp-controller="Roles" asp-action="Details" asp-route-id="@item.RoleId" class="btn btn-success">View</a>
-                                <a asp-area="Admin" asp-controller="Roles" asp-action="Edit" asp-route-id="@item.RoleId" class="btn btn-primary">Edit</a>
-                                <a asp-area="Admin" asp-controller="Roles" asp-action="Delete" asp-route-id="@item.RoleId" class="btn btn-danger">Delete</a>
+                                <a asp-area="Admin" asp-controller="Roles" asp-action="Details" asp-route-id="@item.RoleId" class="btn btn-success">Xem</a>
+                                <a asp-area="Admin" asp-controller="Roles" asp-action="Edit" asp-route-id="@item.RoleId" class="btn btn-primary">Chỉnh sửa</a>
+                                <a asp-area="Admin" asp-controller="Roles" asp-action="Delete" asp-route-id="@item.RoleId" class="btn btn-danger">Xóa</a>
                             </td>
                         </tr>
                     }

@@ -61,7 +61,7 @@ namespace WebDemo.Areas.Admin.Controllers
         // GET: Admin/Categories/Create
         public IActionResult Create()
         {
-            ViewData["DanhMuc"] = new SelectList(_context.Categories.Where(x => x.Levels == 1), "CatID", "CatName");
+             ViewData["DanhMuc"] = new SelectList(_context.Categories, "CatId", "CatName");
             return View();  
         }
 
@@ -121,6 +121,7 @@ namespace WebDemo.Areas.Admin.Controllers
             {
                 return NotFound();
             }
+            ViewData["DanhMuc"] = new SelectList(_context.Categories, "CatId", "CatName", category.CatId);
             return View(category);
         }
 
@@ -183,6 +184,7 @@ namespace WebDemo.Areas.Admin.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["DanhMuc"] = new SelectList(_context.Categories, "CatId", "CatName", category.CatId);
             return View(category);
         }
 

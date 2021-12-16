@@ -13,30 +13,44 @@
             @if (Model.Featured != null)
             {
                 string url = $"/{Model.Featured.Alias}.html";
-                <div class="col-lg-8">
+            <div class="col-lg-8">
 
 
-                    <!-- featured post large -->
-                    <div class="post featured-post-lg">
-                        <div class="details clearfix">
-                            <a href="/@Model.Featured.Alias" class="category-badge">@Model.Featured.Cat.CatName</a>
-                            <h2 class="post-title"><a href="@url ">@Model.Featured.Title</a></h2>
-                            <ul class="meta list-inline mb-0">
-                                <li class="list-inline-item"><a href="#">@Model.Featured.Author</a></li>
-                                @if (Model.Featured.CreateDate != null)
-                                {
-                                    <li class="list-inline-item">@Model.Featured.CreateDate.Value.ToString("dd-MM-yyyy")</li>
-                                }
-                            </ul>
-                        </div>
-                        <a href="@url">
-                            <div class="thumb rounded">
-                                <div class="inner data-bg-image" data-bg-image="/images/posts/from-home-hiu-qu-hn-bao-gi-ht-cng-hp-probook-400-series-g8.jpg"></div>
-                            </div>
-                        </a>
+                <!-- featured post large -->
+                <div class="post featured-post-lg" style=" margin-bottom: 10px;">
+                    <div class="details clearfix">
+                        <a href="/@Model.Featured.Alias" class="category-badge">@Model.Featured.Cat.CatName</a>
+                        <h2 class="post-title"><a href="@url ">@Model.Featured.Title</a></h2>
+                        <ul class="meta list-inline mb-0">
+                            <li class="list-inline-item"><a href="#">@Model.Featured.Author</a></li>
+                            @if (Model.Featured.CreateDate != null)
+                            {
+                                <li class="list-inline-item">@Model.Featured.CreateDate.Value.ToString("dd-MM-yyyy")</li>
+                            }
+                        </ul>
                     </div>
-
+                    <a href="@url">
+                        <div class="thumb rounded">
+                            <div class="inner data-bg-image" data-bg-image="/images/posts/from-home-hiu-qu-hn-bao-gi-ht-cng-hp-probook-400-series-g8.jpg"></div>
+                        </div>
+                    </a>
                 </div>
+                <!-- featured post large -->
+                <div class="post featured-post-lg">
+                    <div class="details clearfix">
+                        <a href="/i-m-a-backend-developer-i-m-currently-working-at-ha-thanh-trade-a-backend-developer.html" class="category-badge">Công nghệ</a>
+                        <ul class="meta list-inline mb-0">
+                            <li class="list-inline-item"><a href="#">Hà Huy Hùng</a></li>
+                        </ul>
+                    </div>
+                    <a href="/i-m-a-backend-developer-i-m-currently-working-at-ha-thanh-trade-a-backend-developer.html">
+                        <div class="thumb rounded">
+                            <div class="inner data-bg-image" data-bg-image="/images/news/i-m-a-backend-developer-i-m-currently-working-at-ha-thanh-trade-a-backend-developer.png" style="background-image: url(&quot;/images/news/i-m-a-backend-developer-i-m-currently-working-at-ha-thanh-trade-a-backend-developer.png&quot;);"></div>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
             }
 
             <div class="col-lg-4">
@@ -45,8 +59,8 @@
                 <div class="post-tabs rounded bordered">
                     <!-- tab navs -->
                     <ul class="nav nav-tabs nav-pills nav-fill" id="postsTab" role="tablist">
-                        <li class="nav-item" role="presentation"><button aria-controls="popular" aria-selected="true" class="nav-link active" data-bs-target="#popular" data-bs-toggle="tab" id="popular-tab" role="tab" type="button">Popular</button></li>
-                        <li class="nav-item" role="presentation"><button aria-controls="recent" aria-selected="false" class="nav-link" data-bs-target="#recent" data-bs-toggle="tab" id="recent-tab" role="tab" type="button">Recent</button></li>
+                        <li class="nav-item" role="presentation"><button aria-controls="popular" aria-selected="true" class="nav-link active" data-bs-target="#popular" data-bs-toggle="tab" id="popular-tab" role="tab" type="button">Tin nổi bật</button></li>
+                        <li class="nav-item" role="presentation"><button aria-controls="recent" aria-selected="false" class="nav-link" data-bs-target="#recent" data-bs-toggle="tab" id="recent-tab" role="tab" type="button">Gần đây</button></li>
                     </ul>
                     <!-- tab contents -->
                     <div class="tab-content" id="postsTabContent">
@@ -127,7 +141,7 @@
                      
     <!-- section header -->
                    <div class="section-header">
-                       <h3 class="section-title">Editor’s Pick</h3>
+                       <h3 class="section-title">Lựa chọn của biên tập viên</h3>
                    </div>
 
     <div class="padding-30 rounded bordered">

@@ -486,7 +486,7 @@ Write(await RenderSectionAsync("Styless", required: false));
 
     <div class=""slim-footer"">
         <div class=""container"">
-            <p>Copyright 2021 &copy; All Rights Reserved. Slim Dashboard Template</p>
+            <p>Copyright 2018 &copy; All Rights Reserved. Slim Dashboard Template</p>
             <p>Designed by: <a");
                 BeginWriteAttribute("href", " href=\"", 6556, "\"", 6563, 0);
                 EndWriteAttribute();

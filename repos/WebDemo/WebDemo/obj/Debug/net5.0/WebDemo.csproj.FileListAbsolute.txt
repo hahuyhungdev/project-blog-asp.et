@@ -917,3 +917,4 @@ D:\backup\GitHub\source\repos\WebDemo\WebDemo\obj\Debug\net5.0\Razor\Views\Share
 D:\backup\GitHub\source\repos\WebDemo\WebDemo\obj\Debug\net5.0\Razor\Views\Posts\Details.cshtml.g.cs
 D:\backup\GitHub\source\repos\WebDemo\WebDemo\obj\Debug\net5.0\Razor\Views\Posts\List.cshtml.g.cs
 D:\backup\GitHub\source\repos\WebDemo\WebDemo\obj\Debug\net5.0\Razor\Views\Home\Contact.cshtml.g.cs
+D:\backup\GitHub\source\repos\WebDemo\WebDemo\obj\Debug\net5.0\Razor\Views\Home\NotFound.cshtml.g.cs

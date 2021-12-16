@@ -7,7 +7,7 @@
 
 <div class="slim-pageheader">
     <ol class="breadcrumb slim-breadcrumb">
-        <li class="breadcrumb-item"><a asp-area="Admin" asp-controller="Home" asp-action="Index">HOME</a></li>
+        <li class="breadcrumb-item"><a asp-area="Admin" asp-controller="Home" asp-action="Index">TRANG CHỦ</a></li>
         <li class="breadcrumb-item"><a asp-area="Admin" asp-controller="Roles" asp-action="Index">DANH SÁCH QUYỀN DANH MỤC</a></li>
         <li class="breadcrumb-item active" aria-current="page">THÔNG TIN QUYỀN DANH MỤC</li>
     </ol>
@@ -65,22 +65,8 @@
                 <input asp-for="MetaDesc" class="form-control" type="text">
             </div><!-- col-8 -->
         </div><!-- row -->
-        <div class="row no-gutters">
-            <div class="col-5 col-sm-4">
-                MetaKey:
-            </div><!-- col-4 -->
-            <div class="col-7 col-sm-8">
-                <input asp-for="MetaKey" class="form-control" type="text">
-            </div><!-- col-8 -->
-        </div><!-- row -->
-        <div class="row no-gutters">
-            <div class="col-5 col-sm-4">
-                MetaKey:
-            </div><!-- col-4 -->
-            <div class="col-7 col-sm-8">
-                <input asp-for="MetaKey" class="form-control" type="text">
-            </div><!-- col-8 -->
-        </div><!-- row -->
+       
+       
 
         <div class="row no-gutters">
             <div class="col-5 col-sm-4">
@@ -105,33 +91,7 @@
                 <input asp-for="Ordering" class="form-control" type="text">
             </div><!-- col-8 -->
         </div><!-- row -->
-        <div class="row no-gutters">
-            <div class="col-5 col-sm-4">
-                Parents:
-            </div><!-- col-4 -->
-            <div class="col-7 col-sm-8">
-                <input asp-for="Parents" class="form-control" type="text">
-            </div><!-- col-8 -->
-        </div><!-- row -->
-        <div class="row no-gutters">
-            <div class="col-5 col-sm-4">
-                Levels:
-            </div><!-- col-4 -->
-            <div class="col-7 col-sm-8">
-                <input asp-for="Levels" class="form-control" type="text">
-            </div><!-- col-8 -->
-        </div><!-- row -->
-        <div class="row no-gutters">
-            <div class="col-5 col-sm-4">
-                Icon:
-            </div><!-- col-4 -->
-            <div class="col-7 col-sm-8">
-                @if (!string.IsNullOrEmpty(Model.Icon))
-                {
-                    <img width="80" height="80" src="~/images/icons/@Model.Icon" alt="@Model.CatName" />
-                }
-            </div><!-- col-8 -->
-        </div><!-- row -->
+      
         <div class="row no-gutters">
             <div class="col-5 col-sm-4">
                 cover:
